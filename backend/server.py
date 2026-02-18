@@ -1251,6 +1251,112 @@ async def get_admin_stats(admin_user: User = Depends(get_admin_user)):
         "total_revenue": total_revenue
     }
 
+@api_router.get("/admin/stats/detailed")
+async def get_detailed_stats(admin_user: User = Depends(get_admin_user)):
+    """Obtener estadísticas detalladas para gráficos del dashboard"""
+    
+    # Órdenes por estado
+    orders = await db.orders.find({}, {"_id": 0}).to_list(10000)
+    orders_by_status = {
+        "pendiente": 0,
+        "recibido": 0,
+        "en_proceso": 0,
+        "completado": 0,
+        "cancelado": 0
+    }
+    for order in orders:
+        status = order.get("status", "pendiente")
+        if status in orders_by_status:
+            orders_by_status[status] += 1
+    
+    # Órdenes por mes (últimos 6 meses)
+    from collections import defaultdict
+    orders_by_month = defaultdict(lambda: {"orders": 0, "revenue": 0})
+    
+    for order in orders:
+        created_at = order.get("created_at", "")
+        if created_at:
+            try:
+                # Extraer año-mes
+                month_key = created_at[:7]  # "2025-01" format
+                orders_by_month[month_key]["orders"] += 1
+                if order.get("status") == "completado":
+                    orders_by_month[month_key]["revenue"] += order.get("total", 0)
+            except:
+                pass
+    
+    # Ordenar por mes y tomar los últimos 6
+    sorted_months = sorted(orders_by_month.items(), key=lambda x: x[0])[-6:]
+    monthly_data = [
+        {
+            "month": month,
+            "orders": data["orders"],
+            "revenue": round(data["revenue"], 2)
+        }
+        for month, data in sorted_months
+    ]
+    
+    # Productos por categoría
+    products = await db.products.find({}, {"_id": 0}).to_list(10000)
+    products_by_category = defaultdict(int)
+    for product in products:
+        category = product.get("category", "otros")
+        products_by_category[category] += 1
+    
+    category_data = [
+        {"category": cat, "count": count}
+        for cat, count in products_by_category.items()
+    ]
+    
+    # Top 5 proveedores por número de productos
+    suppliers_products = defaultdict(lambda: {"name": "", "count": 0})
+    for product in products:
+        supplier_id = product.get("supplier_id", "")
+        supplier_name = product.get("supplier_name", "Desconocido")
+        suppliers_products[supplier_id]["name"] = supplier_name
+        suppliers_products[supplier_id]["count"] += 1
+    
+    top_suppliers = sorted(
+        [{"name": v["name"], "products": v["count"]} for v in suppliers_products.values()],
+        key=lambda x: x["products"],
+        reverse=True
+    )[:5]
+    
+    # Órdenes recientes (últimas 10)
+    recent_orders = await db.orders.find({}, {"_id": 0}).sort("created_at", -1).to_list(10)
+    recent_orders_data = [
+        {
+            "order_number": o.get("order_number", ""),
+            "client_name": o.get("client_name", ""),
+            "total": o.get("total", 0),
+            "status": o.get("status", ""),
+            "created_at": o.get("created_at", "")
+        }
+        for o in recent_orders
+    ]
+    
+    # Ingresos totales por estado
+    revenue_by_status = {
+        "completado": sum(o.get("total", 0) for o in orders if o.get("status") == "completado"),
+        "en_proceso": sum(o.get("total", 0) for o in orders if o.get("status") == "en_proceso"),
+        "pendiente": sum(o.get("total", 0) for o in orders if o.get("status") == "pendiente")
+    }
+    
+    return {
+        "orders_by_status": [
+            {"status": "Pendiente", "count": orders_by_status["pendiente"], "fill": "#f59e0b"},
+            {"status": "Recibido", "count": orders_by_status["recibido"], "fill": "#3b82f6"},
+            {"status": "En Proceso", "count": orders_by_status["en_proceso"], "fill": "#8b5cf6"},
+            {"status": "Completado", "count": orders_by_status["completado"], "fill": "#22c55e"},
+            {"status": "Cancelado", "count": orders_by_status["cancelado"], "fill": "#ef4444"}
+        ],
+        "monthly_data": monthly_data,
+        "products_by_category": category_data,
+        "top_suppliers": top_suppliers,
+        "recent_orders": recent_orders_data,
+        "revenue_by_status": revenue_by_status
+    }
+
 # Include router
 app.include_router(api_router)
 
