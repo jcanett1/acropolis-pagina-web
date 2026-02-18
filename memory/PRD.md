@@ -110,33 +110,33 @@ Aplicación web de e-procurement marítimo inspirada en seaproc.com, con tres po
 ## Última Actualización
 **Fecha:** Febrero 2026
 **Cambios:**
-- **NUEVA PÁGINA: Quiénes Somos** (`/quienes-somos`)
-  - Sección de Historia de la empresa (30 años de trayectoria)
-  - Misión corporativa con compromisos detallados
-  - Visión a 5 años
-  - 6 Valores Corporativos (Confianza, Eficiencia, Alcance, Trabajo en Equipo, Sostenibilidad, Servicio Personalizado)
-  - Sección de Ejecutivos con:
-    - Nombre completo
-    - Puesto (Ejecutivo de Proyectos)
-    - Foto profesional
-    - Correo corporativo (@mardecortez.com)
-    - Número telefónico corporativo
-  - Contacto Corporativo general
-  - Eslogan: "Tu puerto seguro, en cualquier puerto"
 
-- **Mejoras en flujo de órdenes:**
-  - Precios ocultos al cliente hasta que el proveedor actualice la orden
-  - Proveedor NO se asigna automáticamente al crear orden
-  - Proveedor debe "tomar" la orden para asignarse y agregar precios
-  - Nuevo endpoint `/api/orders/{id}/take` para que proveedores tomen órdenes
-  - ClienteHome y Seguimiento muestran "Por cotizar" y "Esperando proveedor" cuando aplica
-  - Campo `price_confirmed` en órdenes para controlar visibilidad de precios
+### Dashboard de Análisis para Admin (P2) ✅
+- **Gráfico de Pastel**: Órdenes por Estado (Pendiente, Recibido, En Proceso, Completado, Cancelado)
+- **Gráfico de Barras Horizontal**: Productos por Categoría
+- **Gráfico de Área**: Tendencia Mensual (Órdenes e Ingresos)
+- **Gráfico de Barras**: Top 5 Proveedores con más productos
+- **Lista**: Órdenes Recientes (últimas 10)
+- **Resumen**: Ingresos por Estado (Completados, En Proceso, Pendientes)
+- Nuevo endpoint `/api/admin/stats/detailed` para datos de gráficos
+- Librería `recharts` instalada para visualizaciones
 
-- **UI/UX Updates:**
-  - Botón "Quiénes Somos" agregado a landing page
-  - Enlace "Quiénes Somos" en Footer
-  - Indicadores visuales de órdenes sin proveedor asignado
-  - Portal del proveedor con botón "Tomar Orden" para órdenes disponibles
+### Página "Quiénes Somos" (`/quienes-somos`)
+- Sección de Historia de la empresa (30 años de trayectoria)
+- **Imagen de fondo de oficina** en Hero Section
+- Misión corporativa con compromisos detallados
+- Visión a 5 años
+- 6 Valores Corporativos
+- Sección de Ejecutivos con contacto corporativo
+- **Google Maps integrado** con ubicación en Guaymas, Son.
+- Dirección: Alfonso Iberri 302-336, Centro, 85400 Guaymas, Son.
+- Eslogan: "Tu puerto seguro, en cualquier puerto"
+
+### Mejoras en flujo de órdenes
+- Precios ocultos al cliente hasta que el proveedor actualice
+- Proveedor NO se asigna automáticamente al crear orden
+- Nuevo endpoint `/api/orders/{id}/take` para que proveedores tomen órdenes
+- Campo `price_confirmed` en órdenes para controlar visibilidad
 
 ---
 
