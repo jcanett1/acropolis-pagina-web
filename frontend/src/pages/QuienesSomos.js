@@ -401,12 +401,57 @@ export default function QuienesSomos() {
                     <Phone className="h-5 w-5 text-secondary" />
                     <span className="text-lg">+52 622 123 4500</span>
                   </div>
+                  <div className="flex items-center justify-center gap-3">
+                    <MapPin className="h-5 w-5 text-secondary" />
+                    <span className="text-lg">Alfonso Iberri 302-336, Centro, 85400 Guaymas, Son.</span>
+                  </div>
                 </div>
                 <p className="mt-4 text-sm text-muted-foreground">
                   Dominio corporativo: @mardecortez.com
                 </p>
               </CardContent>
             </Card>
+
+            {/* Mapa de Google Maps */}
+            <div className="mt-8 max-w-4xl mx-auto">
+              <Card className="overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="relative">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3487.9073714766985!2d-110.88683368490573!3d27.925739082611836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86b98b47c5555555%3A0x1234567890abcdef!2sAlfonso%20Iberri%20302%2C%20Centro%2C%2085400%20Guaymas%2C%20Son.%2C%20Mexico!5e0!3m2!1sen!2smx!4v1704067200000!5m2!1sen!2smx"
+                      width="100%"
+                      height="400"
+                      style={{ border: 0 }}
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Ubicación Mar de Cortez - Guaymas, Sonora"
+                      className="w-full"
+                    />
+                    <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm p-4 rounded-lg shadow-lg max-w-xs">
+                      <div className="flex items-start gap-3">
+                        <MapPin className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
+                        <div>
+                          <p className="font-semibold text-sm">Mar de Cortez</p>
+                          <p className="text-xs text-muted-foreground">
+                            Alfonso Iberri 302-336<br />
+                            Centro, 85400 Guaymas, Son.
+                          </p>
+                          <a 
+                            href="https://www.google.com/maps/search/?api=1&query=27.925739,-110.884652"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs text-secondary hover:underline mt-1 inline-block"
+                          >
+                            Ver en Google Maps →
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </div>
