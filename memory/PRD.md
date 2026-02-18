@@ -82,10 +82,12 @@ Aplicación web de e-procurement marítimo inspirada en seaproc.com, con tres po
     └── src/
         ├── App.js
         ├── components/
+        │   ├── Footer.js
         │   └── Sidebar.js
         └── pages/
             ├── Landing.js
             ├── Login.js
+            ├── QuienesSomos.js  <-- NUEVO
             ├── cliente/
             │   ├── CrearOrden.js
             │   ├── Seguimiento.js
