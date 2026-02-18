@@ -136,7 +136,17 @@ export default function QuienesSomos() {
       </div>
 
       {/* Hero Section */}
-      <div className="relative py-24 px-4 ocean-gradient overflow-hidden">
+      <div className="relative py-24 px-4 overflow-hidden">
+        {/* Imagen de fondo de oficina */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop')`,
+          }}
+        />
+        {/* Overlay oscuro */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A]/90 to-[#1E293B]/85"></div>
+        {/* Efectos decorativos */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
