@@ -55,6 +55,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/quienes-somos" element={<QuienesSomos />} />
           <Route path="/login" element={user ? <Navigate to={user.role === 'admin' ? '/admin' : user.role === 'cliente' ? '/cliente' : '/proveedor'} /> : <Login />} />
           <Route path="/register" element={user ? <Navigate to={user.role === 'admin' ? '/admin' : user.role === 'cliente' ? '/cliente' : '/proveedor'} /> : <Register />} />
           <Route path="/cliente/*" element={user?.role === 'cliente' ? <ClienteDashboard /> : <Navigate to="/login" />} />
