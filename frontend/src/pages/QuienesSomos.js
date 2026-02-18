@@ -16,7 +16,8 @@ import {
   Phone,
   ArrowLeft,
   Anchor,
-  Award
+  Award,
+  MapPin
 } from 'lucide-react';
 import Footer from '@/components/Footer';
 
