@@ -418,7 +418,7 @@ export default function QuienesSomos() {
                 <CardContent className="p-0">
                   <div className="relative">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3487.9073714766985!2d-110.88683368490573!3d27.925739082611836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86b98b47c5555555%3A0x1234567890abcdef!2sAlfonso%20Iberri%20302%2C%20Centro%2C%2085400%20Guaymas%2C%20Son.%2C%20Mexico!5e0!3m2!1sen!2smx!4v1704067200000!5m2!1sen!2smx"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1744.0!2d-110.884652!3d27.925739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDU1JzMyLjciTiAxMTDCsDUzJzA0LjciVw!5e0!3m2!1ses!2smx!4v1704067200000!5m2!1ses!2smx"
                       width="100%"
                       height="400"
                       style={{ border: 0 }}
