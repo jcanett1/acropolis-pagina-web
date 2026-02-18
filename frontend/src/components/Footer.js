@@ -116,18 +116,18 @@ export default function Footer() {
             <div className="flex flex-col gap-4">
               <div className="flex items-start gap-3 text-white/70">
                 <MapPin className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
-                <span className="text-sm">Puerto Vallarta, Jalisco<br />México</span>
+                <span className="text-sm">Alfonso Iberri 302-336<br />Centro, 85400 Guaymas, Son.<br />México</span>
               </div>
               <div className="flex items-center gap-3 text-white/70">
                 <Phone className="w-5 h-5 text-blue-500 flex-shrink-0" />
-                <a href="tel:+523222000000" className="text-sm hover:text-blue-500 transition-colors duration-300">
-                  +52 (322) 200-0000
+                <a href="tel:+526221234500" className="text-sm hover:text-blue-500 transition-colors duration-300">
+                  +52 (622) 123-4500
                 </a>
               </div>
               <div className="flex items-center gap-3 text-white/70">
                 <Mail className="w-5 h-5 text-blue-500 flex-shrink-0" />
-                <a href="mailto:info@mardecortez.com" className="text-sm hover:text-blue-500 transition-colors duration-300">
-                  info@mardecortez.com
+                <a href="mailto:contacto@mardecortez.com" className="text-sm hover:text-blue-500 transition-colors duration-300">
+                  contacto@mardecortez.com
                 </a>
               </div>
             </div>
