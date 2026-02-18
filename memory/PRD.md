@@ -106,11 +106,41 @@ Aplicación web de e-procurement marítimo inspirada en seaproc.com, con tres po
 ---
 
 ## Última Actualización
-**Fecha:** Diciembre 2025
+**Fecha:** Febrero 2026
 **Cambios:**
+- **NUEVA PÁGINA: Quiénes Somos** (`/quienes-somos`)
+  - Sección de Historia de la empresa (30 años de trayectoria)
+  - Misión corporativa con compromisos detallados
+  - Visión a 5 años
+  - 6 Valores Corporativos (Confianza, Eficiencia, Alcance, Trabajo en Equipo, Sostenibilidad, Servicio Personalizado)
+  - Sección de Ejecutivos con:
+    - Nombre completo
+    - Puesto (Ejecutivo de Proyectos)
+    - Foto profesional
+    - Correo corporativo (@mardecortez.com)
+    - Número telefónico corporativo
+  - Contacto Corporativo general
+  - Eslogan: "Tu puerto seguro, en cualquier puerto"
+
+- **Mejoras en flujo de órdenes:**
+  - Precios ocultos al cliente hasta que el proveedor actualice la orden
+  - Proveedor NO se asigna automáticamente al crear orden
+  - Proveedor debe "tomar" la orden para asignarse y agregar precios
+  - Nuevo endpoint `/api/orders/{id}/take` para que proveedores tomen órdenes
+  - ClienteHome y Seguimiento muestran "Por cotizar" y "Esperando proveedor" cuando aplica
+  - Campo `price_confirmed` en órdenes para controlar visibilidad de precios
+
+- **UI/UX Updates:**
+  - Botón "Quiénes Somos" agregado a landing page
+  - Enlace "Quiénes Somos" en Footer
+  - Indicadores visuales de órdenes sin proveedor asignado
+  - Portal del proveedor con botón "Tomar Orden" para órdenes disponibles
+
+---
+
+## Cambios Anteriores (Diciembre 2025)
 - Agregado buscador y filtro por categoría al portal de productos del Admin
 - Precio final visible en cada producto del Admin con desglose (Base + Ganancia + IVA)
-- Precios ocultos en el portal del Cliente al crear órdenes
 - Corregido cálculo de precio final en endpoints de Admin (create/update productos)
 - Corregida visibilidad de órdenes para proveedores
 - Proveedores ahora solo ven sus propios productos en su portal
