@@ -73,11 +73,11 @@ export default function Footer() {
               <Link to="/" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
                 Inicio
               </Link>
+              <Link to="/quienes-somos" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
+                Quiénes Somos
+              </Link>
               <a href="#features" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
                 Características
-              </a>
-              <a href="#about" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
-                Acerca de Nosotros
               </a>
               <a href="#contact" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
                 Contacto
