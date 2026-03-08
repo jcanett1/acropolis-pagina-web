@@ -60,16 +60,21 @@ export default function Landing() {
         throw new Error(data.detail || 'Error al enviar solicitud');
       }
 
-      toast.success('¡Solicitud enviada! Nos pondremos en contacto contigo pronto.');
+      toast.success(t('landing.access.success'));
       setFormData({ boat_name: '', captain_name: '', phone: '', email: '' });
     } catch (error) {
-      toast.error(error.message);
+      toast.error(t('landing.access.error'));
     } finally {
       setLoading(false);
     }
   };
   return (
     <div className="min-h-screen">
+      {/* Language Selector - Fixed position */}
+      <div className="fixed top-4 right-4 z-50">
+        <LanguageSelector variant="ghost" className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border border-white/20" />
+      </div>
+      
       {/* Hero Section with Image Carousel */}
       <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Images Container */}
