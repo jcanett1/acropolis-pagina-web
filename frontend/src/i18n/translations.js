@@ -595,20 +595,41 @@ export const translations = {
         aboutBtn: '关于我们'
       },
       features: {
-        title: '为什么选择我们？',
-        subtitle: '我们是海事电子采购解决方案的领导者',
-        feature1: {
-          title: '综合物流',
-          desc: '完整的供应和辅助服务解决方案'
+        title: '主要功能',
+        cloud: {
+          title: '云端',
+          desc: '从任何有互联网的设备访问您的信息。'
         },
-        feature2: {
-          title: '联盟港口网络',
-          desc: '与整个地区的港口建立战略协议'
+        management: {
+          title: '完整管理',
+          desc: '从一个地方管理订单、产品和供应商。'
         },
-        feature3: {
-          title: '认证质量',
-          desc: '最高的安全和效率标准'
+        tracking: {
+          title: '实时跟踪',
+          desc: '在流程的每个阶段跟踪订单状态。'
+        },
+        suppliers: {
+          title: '供应商网络',
+          desc: '连接多个供应商并管理业务关系。'
         }
+      },
+      cta: {
+        title: '准备好转变您的采购管理了吗？',
+        subtitle: '填写表格，我们的团队将与您联系。'
+      },
+      registration: {
+        title: '注册申请',
+        subtitle: '填写您的详细信息，我们将与您联系',
+        boatName: '船名',
+        boatPlaceholder: '例：海王星三号',
+        captainName: '船长姓名',
+        captainPlaceholder: '例：张三',
+        phone: '电话',
+        phonePlaceholder: '例：+86 123 456 7890',
+        email: '电子邮件',
+        emailPlaceholder: 'your@email.com',
+        submit: '提交申请',
+        submitting: '提交中...'
       },
       access: {
         title: '申请访问',
@@ -618,7 +639,7 @@ export const translations = {
         email: '电子邮件',
         phone: '电话',
         submit: '提交申请',
-        success: '申请提交成功',
+        success: '申请提交成功！我们将很快与您联系。',
         error: '提交申请时出错'
       }
     },
