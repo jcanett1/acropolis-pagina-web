@@ -139,7 +139,7 @@ export default function Landing() {
       <div className="py-24 px-4 bg-background">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground" data-testid="features-heading">
-            Características Principales
+            {t('landing.features.title')}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="card-hover" data-testid="feature-cloud">
@@ -147,9 +147,9 @@ export default function Landing() {
                 <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
                   <Ship className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">En la Nube</h3>
+                <h3 className="text-xl font-semibold mb-2">{t('landing.features.cloud.title')}</h3>
                 <p className="text-muted-foreground">
-                  Accede a tu información desde cualquier dispositivo con internet.
+                  {t('landing.features.cloud.desc')}
                 </p>
               </CardContent>
             </Card>
@@ -158,9 +158,9 @@ export default function Landing() {
                 <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
                   <Package className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Gestión Completa</h3>
+                <h3 className="text-xl font-semibold mb-2">{t('landing.features.management.title')}</h3>
                 <p className="text-muted-foreground">
-                  Administra órdenes, productos y proveedores desde un solo lugar.
+                  {t('landing.features.management.desc')}
                 </p>
               </CardContent>
             </Card>
@@ -169,9 +169,9 @@ export default function Landing() {
                 <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
                   <TrendingUp className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Seguimiento en Tiempo Real</h3>
+                <h3 className="text-xl font-semibold mb-2">{t('landing.features.tracking.title')}</h3>
                 <p className="text-muted-foreground">
-                  Rastrea el estado de tus órdenes en cada etapa del proceso.
+                  {t('landing.features.tracking.desc')}
                 </p>
               </CardContent>
             </Card>
@@ -180,9 +180,9 @@ export default function Landing() {
                 <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
                   <Users className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Red de Proveedores</h3>
+                <h3 className="text-xl font-semibold mb-2">{t('landing.features.suppliers.title')}</h3>
                 <p className="text-muted-foreground">
-                  Conecta con múltiples proveedores y gestiona relaciones comerciales.
+                  {t('landing.features.suppliers.desc')}
                 </p>
               </CardContent>
             </Card>
@@ -194,10 +194,10 @@ export default function Landing() {
       <div className="py-24 px-4 ocean-gradient">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" data-testid="cta-heading">
-            ¿Listo para transformar tu gestión de compras?
+            {t('landing.cta.title')}
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Completa el formulario y nuestro equipo se pondrá en contacto contigo.
+            {t('landing.cta.subtitle')}
           </p>
         </div>
       </div>
@@ -207,16 +207,16 @@ export default function Landing() {
         <div className="max-w-2xl mx-auto">
           <Card className="shadow-2xl" data-testid="registration-form">
             <CardContent className="p-8">
-              <h2 className="text-3xl font-bold mb-2 text-center">Solicitud de Registro</h2>
+              <h2 className="text-3xl font-bold mb-2 text-center">{t('landing.registration.title')}</h2>
               <p className="text-muted-foreground text-center mb-8">
-                Completa tus datos y nos pondremos en contacto contigo
+                {t('landing.registration.subtitle')}
               </p>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
-                  <Label htmlFor="boat_name">Nombre del Barco</Label>
+                  <Label htmlFor="boat_name">{t('landing.registration.boatName')}</Label>
                   <Input
                     id="boat_name"
-                    placeholder="Ej: Neptuno III"
+                    placeholder={t('landing.registration.boatPlaceholder')}
                     value={formData.boat_name}
                     onChange={(e) => setFormData({ ...formData, boat_name: e.target.value })}
                     required
@@ -224,10 +224,10 @@ export default function Landing() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="captain_name">Nombre del Capitán</Label>
+                  <Label htmlFor="captain_name">{t('landing.registration.captainName')}</Label>
                   <Input
                     id="captain_name"
-                    placeholder="Ej: Juan Pérez"
+                    placeholder={t('landing.registration.captainPlaceholder')}
                     value={formData.captain_name}
                     onChange={(e) => setFormData({ ...formData, captain_name: e.target.value })}
                     required
@@ -235,11 +235,11 @@ export default function Landing() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="phone">Teléfono</Label>
+                  <Label htmlFor="phone">{t('landing.registration.phone')}</Label>
                   <Input
                     id="phone"
                     type="tel"
-                    placeholder="Ej: +52 123 456 7890"
+                    placeholder={t('landing.registration.phonePlaceholder')}
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     required
@@ -247,11 +247,11 @@ export default function Landing() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email">Correo Electrónico</Label>
+                  <Label htmlFor="email">{t('landing.registration.email')}</Label>
                   <Input
                     id="email"
                     type="email"
-                    placeholder="tu@email.com"
+                    placeholder={t('landing.registration.emailPlaceholder')}
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     required
@@ -265,7 +265,7 @@ export default function Landing() {
                   disabled={loading}
                   data-testid="submit-registration-btn"
                 >
-                  {loading ? 'Enviando...' : 'Enviar Solicitud'}
+                  {loading ? t('landing.registration.submitting') : t('landing.registration.submit')}
                 </Button>
               </form>
             </CardContent>
