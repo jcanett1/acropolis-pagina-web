@@ -29,20 +29,41 @@ export const translations = {
         aboutBtn: 'About Us'
       },
       features: {
-        title: 'Why Choose Us?',
-        subtitle: 'We are leaders in maritime e-procurement solutions',
-        feature1: {
-          title: 'Integral Logistics',
-          desc: 'Complete supply and auxiliary services solutions'
+        title: 'Key Features',
+        cloud: {
+          title: 'Cloud Based',
+          desc: 'Access your information from any device with internet.'
         },
-        feature2: {
-          title: 'Allied Ports Network',
-          desc: 'Strategic agreements with ports throughout the region'
+        management: {
+          title: 'Complete Management',
+          desc: 'Manage orders, products and suppliers from one place.'
         },
-        feature3: {
-          title: 'Certified Quality',
-          desc: 'Highest standards in safety and efficiency'
+        tracking: {
+          title: 'Real-Time Tracking',
+          desc: 'Track the status of your orders at every stage of the process.'
+        },
+        suppliers: {
+          title: 'Supplier Network',
+          desc: 'Connect with multiple suppliers and manage business relationships.'
         }
+      },
+      cta: {
+        title: 'Ready to transform your purchasing management?',
+        subtitle: 'Complete the form and our team will contact you.'
+      },
+      registration: {
+        title: 'Registration Request',
+        subtitle: 'Complete your details and we will contact you',
+        boatName: 'Boat Name',
+        boatPlaceholder: 'Ex: Neptune III',
+        captainName: 'Captain Name',
+        captainPlaceholder: 'Ex: John Smith',
+        phone: 'Phone',
+        phonePlaceholder: 'Ex: +1 123 456 7890',
+        email: 'Email',
+        emailPlaceholder: 'your@email.com',
+        submit: 'Submit Request',
+        submitting: 'Submitting...'
       },
       access: {
         title: 'Request Access',
@@ -52,7 +73,7 @@ export const translations = {
         email: 'Email',
         phone: 'Phone',
         submit: 'Submit Request',
-        success: 'Request submitted successfully',
+        success: 'Request submitted successfully! We will contact you soon.',
         error: 'Error submitting request'
       }
     },
