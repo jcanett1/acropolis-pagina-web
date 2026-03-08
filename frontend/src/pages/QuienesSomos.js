@@ -113,6 +113,7 @@ const valores = [
 ];
 
 export default function QuienesSomos() {
+  const { t } = useLanguage();
   const [selectedEjecutivo, setSelectedEjecutivo] = useState(null);
 
   return (
@@ -122,18 +123,19 @@ export default function QuienesSomos() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
             <Ship className="h-8 w-8" />
-            <span className="text-2xl font-bold">Mar de Cortez</span>
+            <span className="text-2xl font-bold">{t('landing.hero.title')}</span>
           </Link>
-          <div className="flex gap-4">
+          <div className="flex gap-4 items-center">
+            <LanguageSelector variant="ghost" className="text-white hover:bg-white/10" />
             <Link to="/">
               <Button variant="ghost" className="text-white hover:bg-white/10">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Volver al Inicio
+                {t('common.back')}
               </Button>
             </Link>
             <Link to="/login">
               <Button className="bg-secondary hover:bg-secondary/80 text-secondary-foreground">
-                Iniciar Sesión
+                {t('nav.login')}
               </Button>
             </Link>
           </div>
