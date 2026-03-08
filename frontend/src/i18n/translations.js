@@ -534,7 +534,16 @@ export const translations = {
       login: 'Iniciar Sesión',
       contactUs: 'Contáctanos',
       rights: 'Todos los derechos reservados.',
-      certifications: 'Certificaciones'
+      certifications: 'Certificaciones',
+      services: 'Servicios',
+      orderManagement: 'Gestión de Órdenes',
+      realTimeTracking: 'Seguimiento en Tiempo Real',
+      supplierNetwork: 'Red de Proveedores',
+      analyticsReports: 'Análisis y Reportes',
+      support247: 'Soporte Técnico 24/7',
+      newsletter: 'Suscríbete a nuestro boletín',
+      yourEmail: 'Tu correo',
+      newsletterSuccess: '¡Gracias por suscribirte! Te enviaremos noticias a:'
     },
     // Common
     common: {
