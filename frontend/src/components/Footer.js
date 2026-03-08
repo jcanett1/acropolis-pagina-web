@@ -71,24 +71,28 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-lg font-semibold">Enlaces Rápidos</h3>
+            <h3 className="text-lg font-semibold">{t('footer.quickLinks')}</h3>
             <nav className="flex flex-col gap-2.5">
               <Link to="/" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
-                Inicio
+                {t('footer.home')}
               </Link>
               <Link to="/quienes-somos" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
-                Quiénes Somos
+                {t('footer.aboutUs')}
               </Link>
               <a href="#features" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
-                Características
+                {t('footer.features')}
               </a>
               <a href="#contact" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
-                Contacto
+                {t('footer.contact')}
               </a>
               <Link to="/login" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
-                Iniciar Sesión
+                {t('footer.login')}
               </Link>
             </nav>
+            {/* Language Selector in Footer */}
+            <div className="mt-4">
+              <LanguageSelector variant="outline" className="w-full justify-start" />
+            </div>
           </div>
 
           {/* Services */}
