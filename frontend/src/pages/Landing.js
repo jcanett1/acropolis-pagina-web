@@ -98,21 +98,21 @@ export default function Landing() {
         {/* Content */}
         <div className="relative z-20 text-center px-4 max-w-5xl">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-in slide-in-from-bottom-4 duration-700" data-testid="hero-heading">
-            Mar de Cortez
+            {t('landing.hero.title')}
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed animate-in slide-in-from-bottom-4 duration-700 delay-150" data-testid="hero-description">
-            Sistema de pedidos marino basado en la nube. Gestiona todas tus actividades de compra de manera eficiente y simplificada.
+            {t('landing.hero.subtitle')}
           </p>
           <div className="flex gap-4 justify-center animate-in slide-in-from-bottom-4 duration-700 delay-300">
             <Link to="/login">
               <Button size="lg" className="bg-secondary hover:bg-secondary/80 text-secondary-foreground px-8 py-6 text-lg font-semibold shadow-lg" data-testid="login-btn">
-                Iniciar Sesión
+                {t('nav.login')}
               </Button>
             </Link>
             <Link to="/quienes-somos">
               <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg font-semibold" data-testid="about-btn">
                 <Info className="mr-2 h-5 w-5" />
-                Quiénes Somos
+                {t('nav.aboutUs')}
               </Button>
             </Link>
           </div>
