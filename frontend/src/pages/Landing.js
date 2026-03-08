@@ -8,6 +8,8 @@ import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
 import { API } from '@/App';
 import Footer from '@/components/Footer';
+import LanguageSelector from '@/components/LanguageSelector';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 // Imágenes de barcos mercantes y puertos
 const heroImages = [
