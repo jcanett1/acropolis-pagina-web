@@ -169,14 +169,14 @@ export default function Footer() {
       <div className="border-t border-white/10 bg-black/20">
         <div className="max-w-7xl mx-auto px-5 py-5 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
           <p className="text-white/60 text-sm">
-            © {currentYear} Mar de Cortez. Todos los derechos reservados.
+            © {currentYear} {t('landing.hero.title')}. {t('footer.rights')}
           </p>
           <div className="flex gap-6 justify-center">
             <a href="#" className="text-white/60 text-sm hover:text-white transition-colors duration-300">
-              Política de Privacidad
+              Privacy Policy
             </a>
             <a href="#" className="text-white/60 text-sm hover:text-white transition-colors duration-300">
-              Términos y Condiciones
+              Terms & Conditions
             </a>
             <a href="#" className="text-white/60 text-sm hover:text-white transition-colors duration-300">
               Cookies
