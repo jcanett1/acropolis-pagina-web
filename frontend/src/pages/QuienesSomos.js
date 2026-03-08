@@ -433,7 +433,7 @@ export default function QuienesSomos() {
                       <div className="flex items-start gap-3">
                         <MapPin className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
                         <div>
-                          <p className="font-semibold text-sm">Mar de Cortez</p>
+                          <p className="font-semibold text-sm">{t('landing.hero.title')}</p>
                           <p className="text-xs text-muted-foreground">
                             Alfonso Iberri 302-336<br />
                             Centro, 85400 Guaymas, Son.
@@ -444,7 +444,7 @@ export default function QuienesSomos() {
                             rel="noopener noreferrer"
                             className="text-xs text-secondary hover:underline mt-1 inline-block"
                           >
-                            Ver en Google Maps →
+                            {t('about.contact.viewMap')}
                           </a>
                         </div>
                       </div>
@@ -457,22 +457,44 @@ export default function QuienesSomos() {
         </div>
       </div>
 
+      {/* Certifications Section */}
+      <div className="py-16 px-4 bg-background">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="flex items-center justify-center gap-3 mb-8">
+            <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center">
+              <Award className="h-6 w-6 text-secondary" />
+            </div>
+            <h2 className="text-3xl font-bold">{t('about.certifications')}</h2>
+          </div>
+          <Card className="overflow-hidden">
+            <CardContent className="p-8">
+              <img 
+                src={CERTIFICATIONS_IMAGE}
+                alt={t('about.certifications')}
+                className="w-full max-w-2xl mx-auto rounded-lg shadow-lg"
+                data-testid="certifications-image"
+              />
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+
       {/* CTA Final */}
       <div className="py-16 px-4 bg-muted/30">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">¿Listo para trabajar con nosotros?</h2>
+          <h2 className="text-3xl font-bold mb-4">{t('about.cta.title')}</h2>
           <p className="text-muted-foreground mb-8">
-            Únete a las empresas que confían en Mar de Cortez para sus operaciones marítimas
+            {t('about.cta.subtitle')}
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Link to="/">
               <Button size="lg" className="bg-secondary hover:bg-secondary/80">
-                Solicitar Registro
+                {t('about.cta.register')}
               </Button>
             </Link>
             <Link to="/login">
               <Button size="lg" variant="outline">
-                Iniciar Sesión
+                {t('about.cta.login')}
               </Button>
             </Link>
           </div>
