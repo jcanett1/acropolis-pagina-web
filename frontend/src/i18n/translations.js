@@ -312,20 +312,41 @@ export const translations = {
         aboutBtn: 'Quiénes Somos'
       },
       features: {
-        title: '¿Por Qué Elegirnos?',
-        subtitle: 'Somos líderes en soluciones de e-procurement marítimo',
-        feature1: {
-          title: 'Logística Integral',
-          desc: 'Soluciones completas de abastecimiento y servicios auxiliares'
+        title: 'Características Principales',
+        cloud: {
+          title: 'En la Nube',
+          desc: 'Accede a tu información desde cualquier dispositivo con internet.'
         },
-        feature2: {
-          title: 'Red de Puertos Aliados',
-          desc: 'Acuerdos estratégicos con puertos en toda la región'
+        management: {
+          title: 'Gestión Completa',
+          desc: 'Administra órdenes, productos y proveedores desde un solo lugar.'
         },
-        feature3: {
-          title: 'Calidad Certificada',
-          desc: 'Los más altos estándares en seguridad y eficiencia'
+        tracking: {
+          title: 'Seguimiento en Tiempo Real',
+          desc: 'Rastrea el estado de tus órdenes en cada etapa del proceso.'
+        },
+        suppliers: {
+          title: 'Red de Proveedores',
+          desc: 'Conecta con múltiples proveedores y gestiona relaciones comerciales.'
         }
+      },
+      cta: {
+        title: '¿Listo para transformar tu gestión de compras?',
+        subtitle: 'Completa el formulario y nuestro equipo se pondrá en contacto contigo.'
+      },
+      registration: {
+        title: 'Solicitud de Registro',
+        subtitle: 'Completa tus datos y nos pondremos en contacto contigo',
+        boatName: 'Nombre del Barco',
+        boatPlaceholder: 'Ej: Neptuno III',
+        captainName: 'Nombre del Capitán',
+        captainPlaceholder: 'Ej: Juan Pérez',
+        phone: 'Teléfono',
+        phonePlaceholder: 'Ej: +52 123 456 7890',
+        email: 'Correo Electrónico',
+        emailPlaceholder: 'tu@email.com',
+        submit: 'Enviar Solicitud',
+        submitting: 'Enviando...'
       },
       access: {
         title: 'Solicitar Acceso',
@@ -335,7 +356,7 @@ export const translations = {
         email: 'Correo Electrónico',
         phone: 'Teléfono',
         submit: 'Enviar Solicitud',
-        success: 'Solicitud enviada exitosamente',
+        success: '¡Solicitud enviada! Nos pondremos en contacto contigo pronto.',
         error: 'Error al enviar solicitud'
       }
     },
