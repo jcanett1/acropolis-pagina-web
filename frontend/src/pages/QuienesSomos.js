@@ -20,6 +20,11 @@ import {
   MapPin
 } from 'lucide-react';
 import Footer from '@/components/Footer';
+import LanguageSelector from '@/components/LanguageSelector';
+import { useLanguage } from '@/i18n/LanguageContext';
+
+// URL de la imagen de certificaciones
+const CERTIFICATIONS_IMAGE = 'https://customer-assets.emergentagent.com/job_seaprocure/artifacts/w84djjvg_image.png';
 
 // Datos de los ejecutivos
 const ejecutivos = [
