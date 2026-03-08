@@ -2,14 +2,17 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Ship, Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail } from 'lucide-react';
 import { toast } from 'sonner';
+import { useLanguage } from '@/i18n/LanguageContext';
+import LanguageSelector from '@/components/LanguageSelector';
 
 export default function Footer() {
+  const { t } = useLanguage();
   const [email, setEmail] = useState('');
   const currentYear = new Date().getFullYear();
 
   const handleNewsletterSubmit = (e) => {
     e.preventDefault();
-    toast.success(`¡Gracias por suscribirte! Te enviaremos noticias a: ${email}`);
+    toast.success(t('landing.access.success'));
     setEmail('');
   };
 
@@ -21,10 +24,10 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3">
               <Ship className="w-10 h-10 text-blue-500" />
-              <span className="text-2xl font-bold">Mar de Cortez</span>
+              <span className="text-2xl font-bold">{t('landing.hero.title')}</span>
             </div>
             <p className="text-white/70 leading-relaxed text-sm">
-              Sistema de pedidos marino basado en la nube. Gestiona todas tus actividades de compra de manera eficiente y simplificada.
+              {t('footer.description')}
             </p>
             <div className="flex gap-3 pt-2">
               <a 
