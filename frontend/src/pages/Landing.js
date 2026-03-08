@@ -22,6 +22,7 @@ const heroImages = [
 ];
 
 export default function Landing() {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     boat_name: '',
     captain_name: '',
