@@ -817,7 +817,16 @@ export const translations = {
       login: '登录',
       contactUs: '联系我们',
       rights: '版权所有。',
-      certifications: '认证'
+      certifications: '认证',
+      services: '服务',
+      orderManagement: '订单管理',
+      realTimeTracking: '实时跟踪',
+      supplierNetwork: '供应商网络',
+      analyticsReports: '分析和报告',
+      support247: '24/7技术支持',
+      newsletter: '订阅我们的新闻',
+      yourEmail: '您的电子邮件',
+      newsletterSuccess: '感谢订阅！我们将向您发送新闻：'
     },
     // Common
     common: {
