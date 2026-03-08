@@ -161,13 +161,13 @@ export default function QuienesSomos() {
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full mb-6">
             <Award className="h-5 w-5 text-secondary" />
-            <span className="text-white/90 font-medium">30 Años de Experiencia</span>
+            <span className="text-white/90 font-medium">{t('about.hero.badge')}</span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" data-testid="about-heading">
-            Quiénes Somos
+            {t('about.hero.title')}
           </h1>
           <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-4xl mx-auto">
-            Tu puerto seguro, en cualquier puerto.
+            {t('about.hero.tagline')}
           </p>
         </div>
       </div>
@@ -181,20 +181,14 @@ export default function QuienesSomos() {
                 <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center">
                   <Anchor className="h-6 w-6 text-secondary" />
                 </div>
-                <h2 className="text-3xl font-bold text-foreground">Nuestra Historia</h2>
+                <h2 className="text-3xl font-bold text-foreground">{t('about.history.title')}</h2>
               </div>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  Somos el <strong className="text-foreground">enlace estratégico y el proveedor de confianza</strong> para la navegación mercante en la región. Con <strong className="text-foreground">30 años de trayectoria ininterrumpida</strong>, nos hemos consolidado como el socio integral para los buques que arriban a nuestro puerto.
-                </p>
-                <p>
-                  Ofrecemos soluciones logísticas, de abastecimiento y servicios auxiliares con los más altos estándares de <strong className="text-foreground">eficiencia, seguridad y puntualidad</strong>.
-                </p>
-                <p>
-                  Nuestra fortaleza se basa en una extensa red de clientes y proveedores de primer nivel, y en acuerdos de colaboración con puertos hermanos. Esto nos permite garantizar un suministro rápido, competitivo y confiable, sin importar la escala o urgencia de la demanda.
-                </p>
+                <p>{t('about.history.p1')}</p>
+                <p>{t('about.history.p2')}</p>
+                <p>{t('about.history.p3')}</p>
                 <p className="text-lg font-medium text-foreground italic border-l-4 border-secondary pl-4 py-2 bg-secondary/5 rounded-r">
-                  "Somos más que un proveedor; somos un partner comprometido con la continuidad operativa de sus viajes."
+                  {t('about.history.quote')}
                 </p>
               </div>
             </div>
