@@ -1,6 +1,7 @@
 import React, { useState, useEffect, createContext } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from '@/components/ui/sonner';
+import { LanguageProvider } from '@/i18n/LanguageContext';
 import Landing from '@/pages/Landing';
 import Login from '@/pages/Login';
 import Register from '@/pages/Register';
@@ -51,20 +52,22 @@ function App() {
   }
 
   return (
-    <AuthContext.Provider value={{ user, setUser, logout }}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/quienes-somos" element={<QuienesSomos />} />
-          <Route path="/login" element={user ? <Navigate to={user.role === 'admin' ? '/admin' : user.role === 'cliente' ? '/cliente' : '/proveedor'} /> : <Login />} />
-          <Route path="/register" element={user ? <Navigate to={user.role === 'admin' ? '/admin' : user.role === 'cliente' ? '/cliente' : '/proveedor'} /> : <Register />} />
-          <Route path="/cliente/*" element={user?.role === 'cliente' ? <ClienteDashboard /> : <Navigate to="/login" />} />
-          <Route path="/proveedor/*" element={user?.role === 'proveedor' ? <ProveedorDashboard /> : <Navigate to="/login" />} />
-          <Route path="/admin/*" element={user?.role === 'admin' ? <AdminDashboard /> : <Navigate to="/login" />} />
-        </Routes>
-        <Toaster position="top-right" />
-      </BrowserRouter>
-    </AuthContext.Provider>
+    <LanguageProvider>
+      <AuthContext.Provider value={{ user, setUser, logout }}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/quienes-somos" element={<QuienesSomos />} />
+            <Route path="/login" element={user ? <Navigate to={user.role === 'admin' ? '/admin' : user.role === 'cliente' ? '/cliente' : '/proveedor'} /> : <Login />} />
+            <Route path="/register" element={user ? <Navigate to={user.role === 'admin' ? '/admin' : user.role === 'cliente' ? '/cliente' : '/proveedor'} /> : <Register />} />
+            <Route path="/cliente/*" element={user?.role === 'cliente' ? <ClienteDashboard /> : <Navigate to="/login" />} />
+            <Route path="/proveedor/*" element={user?.role === 'proveedor' ? <ProveedorDashboard /> : <Navigate to="/login" />} />
+            <Route path="/admin/*" element={user?.role === 'admin' ? <AdminDashboard /> : <Navigate to="/login" />} />
+          </Routes>
+          <Toaster position="top-right" />
+        </BrowserRouter>
+      </AuthContext.Provider>
+    </LanguageProvider>
   );
 }
 
