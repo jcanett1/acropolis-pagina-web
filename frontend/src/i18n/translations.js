@@ -251,7 +251,16 @@ export const translations = {
       login: 'Login',
       contactUs: 'Contact Us',
       rights: 'All rights reserved.',
-      certifications: 'Certifications'
+      certifications: 'Certifications',
+      services: 'Services',
+      orderManagement: 'Order Management',
+      realTimeTracking: 'Real-Time Tracking',
+      supplierNetwork: 'Supplier Network',
+      analyticsReports: 'Analytics & Reports',
+      support247: '24/7 Technical Support',
+      newsletter: 'Subscribe to our newsletter',
+      yourEmail: 'Your email',
+      newsletterSuccess: 'Thanks for subscribing! We will send news to:'
     },
     // Common
     common: {
