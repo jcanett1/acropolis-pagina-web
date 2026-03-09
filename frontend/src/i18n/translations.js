@@ -22,7 +22,7 @@ export const translations = {
     landing: {
       hero: {
         badge: '30 Years of Excellence in Maritime Services',
-        title: 'Sea of Cortez',
+        title: 'GENERAL SHIPS CHANDLER ACROPOLIS',
         subtitle: 'Your trusted partner for maritime fleet supply. Total reliability, unmatched efficiency.',
         tagline: 'Your safe harbor, in any port.',
         loginBtn: 'Login',
@@ -186,12 +186,12 @@ export const translations = {
       },
       contact: {
         title: 'Corporate Contact',
-        domain: 'Corporate domain: @seaofcortez.com',
+        domain: 'Corporate emails: acropolis@hotmail.com | sales@gscacropolis.com',
         viewMap: 'View on Google Maps →'
       },
       cta: {
         title: 'Ready to work with us?',
-        subtitle: 'Join the companies that trust Sea of Cortez for their maritime operations',
+        subtitle: 'Join the companies that trust GENERAL SHIPS CHANDLER ACROPOLIS for their maritime operations',
         register: 'Request Registration',
         login: 'Login'
       },
@@ -316,12 +316,15 @@ export const translations = {
       contactUs: 'Contact Us',
       rights: 'All rights reserved.',
       certifications: 'Certifications',
-      services: 'Services',
-      orderManagement: 'Order Management',
-      realTimeTracking: 'Real-Time Tracking',
-      supplierNetwork: 'Supplier Network',
-      analyticsReports: 'Analytics & Reports',
-      support247: '24/7 Technical Support',
+      services: 'Our Services',
+      communication247: '24/7 Communication, 365 days a year',
+      provisions: 'Provisions',
+      personalArticles: 'Personal Articles',
+      navigationEquipment: 'Navigation Equipment',
+      consumables: 'Consumables Cover and Machines',
+      cabin: 'Cabin',
+      rescueEquipment: 'Rescue Equipment',
+      ourServices: 'Our Services',
       newsletter: 'Subscribe to our newsletter',
       yourEmail: 'Your email',
       newsletterSuccess: 'Thanks for subscribing! We will send news to:',
@@ -373,7 +376,7 @@ export const translations = {
     landing: {
       hero: {
         badge: '30 Años de Excelencia en Servicios Marítimos',
-        title: 'Mar de Cortez',
+        title: 'GENERAL SHIPS CHANDLER ACROPOLIS',
         subtitle: 'Tu socio de confianza para el abastecimiento de flotas marítimas. Confiabilidad total, eficiencia incomparable.',
         tagline: 'Tu puerto seguro, en cualquier puerto.',
         loginBtn: 'Iniciar Sesión',
@@ -537,12 +540,12 @@ export const translations = {
       },
       contact: {
         title: 'Contacto Corporativo',
-        domain: 'Dominio corporativo: @mardecortez.com',
+        domain: 'Correos corporativos: acropolis@hotmail.com | sales@gscacropolis.com',
         viewMap: 'Ver en Google Maps →'
       },
       cta: {
         title: '¿Listo para trabajar con nosotros?',
-        subtitle: 'Únete a las empresas que confían en Mar de Cortez para sus operaciones marítimas',
+        subtitle: 'Únete a las empresas que confían en GENERAL SHIPS CHANDLER ACROPOLIS para sus operaciones marítimas',
         register: 'Solicitar Registro',
         login: 'Iniciar Sesión'
       },
@@ -551,7 +554,7 @@ export const translations = {
     // Admin Dashboard
     admin: {
       title: 'Panel de Administración',
-      subtitle: 'Gestiona todo el sistema Mar de Cortez',
+      subtitle: 'Gestiona todo el sistema GENERAL SHIPS CHANDLER ACROPOLIS',
       stats: {
         pendingRequests: 'Solicitudes Pendientes',
         totalUsers: 'Usuarios Totales',
@@ -667,12 +670,15 @@ export const translations = {
       contactUs: 'Contáctanos',
       rights: 'Todos los derechos reservados.',
       certifications: 'Certificaciones',
-      services: 'Servicios',
-      orderManagement: 'Gestión de Órdenes',
-      realTimeTracking: 'Seguimiento en Tiempo Real',
-      supplierNetwork: 'Red de Proveedores',
-      analyticsReports: 'Análisis y Reportes',
-      support247: 'Soporte Técnico 24/7',
+      services: 'Nuestros Servicios',
+      communication247: 'Comunicación 24 horas, 365 días del año',
+      provisions: 'Provisiones',
+      personalArticles: 'Artículos Personales',
+      navigationEquipment: 'Equipo de Navegación',
+      consumables: 'Consumibles de Cubierta y Máquinas',
+      cabin: 'Cabina',
+      rescueEquipment: 'Equipo de Rescate',
+      ourServices: 'Nuestros Servicios',
       newsletter: 'Suscríbete a nuestro boletín',
       yourEmail: 'Tu correo',
       newsletterSuccess: '¡Gracias por suscribirte! Te enviaremos noticias a:',
@@ -724,7 +730,7 @@ export const translations = {
     landing: {
       hero: {
         badge: '30年卓越海事服务',
-        title: '科尔特斯海',
+        title: 'GENERAL SHIPS CHANDLER ACROPOLIS',
         subtitle: '您值得信赖的海上船队供应合作伙伴。完全可靠，无与伦比的效率。',
         tagline: '您的安全港湾，在任何港口。',
         loginBtn: '登录',
@@ -888,12 +894,12 @@ export const translations = {
       },
       contact: {
         title: '企业联系方式',
-        domain: '企业域名：@seaofcortez.com',
+        domain: '企业邮箱: acropolis@hotmail.com | sales@gscacropolis.com',
         viewMap: '在谷歌地图上查看 →'
       },
       cta: {
         title: '准备好与我们合作了吗？',
-        subtitle: '加入信任科尔特斯海进行海事运营的公司',
+        subtitle: '加入信任 GENERAL SHIPS CHANDLER ACROPOLIS 进行海事运营的公司',
         register: '申请注册',
         login: '登录'
       },
@@ -1018,12 +1024,15 @@ export const translations = {
       contactUs: '联系我们',
       rights: '版权所有。',
       certifications: '认证',
-      services: '服务',
-      orderManagement: '订单管理',
-      realTimeTracking: '实时跟踪',
-      supplierNetwork: '供应商网络',
-      analyticsReports: '分析和报告',
-      support247: '24/7技术支持',
+      services: '我们的服务',
+      communication247: '24小时通讯，全年365天',
+      provisions: '食品供应',
+      personalArticles: '个人用品',
+      navigationEquipment: '导航设备',
+      consumables: '甲板和机器消耗品',
+      cabin: '船舱',
+      rescueEquipment: '救援设备',
+      ourServices: '我们的服务',
       newsletter: '订阅我们的新闻',
       yourEmail: '您的电子邮件',
       newsletterSuccess: '感谢订阅！我们将向您发送新闻：',

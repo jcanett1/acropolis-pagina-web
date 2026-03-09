@@ -566,7 +566,10 @@ export default function Landing() {
                 <div className="space-y-4">
                   <div className="flex items-center justify-center gap-3">
                     <Mail className="h-5 w-5 text-secondary" />
-                    <span className="text-lg">contacto@mardecortez.com</span>
+                    <div className="flex flex-col">
+                      <span className="text-lg">acropolis@hotmail.com</span>
+                      <span className="text-lg">sales@gscacropolis.com</span>
+                    </div>
                   </div>
                   <div className="flex items-center justify-center gap-3">
                     <Phone className="h-5 w-5 text-secondary" />
@@ -700,9 +703,12 @@ export default function Landing() {
                   <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center">
                     <Mail className="w-6 h-6 text-secondary" />
                   </div>
-                  <div>
-                    <a href="mailto:contacto@mardecortez.com" className="hover:text-secondary transition-colors">
-                      contacto@mardecortez.com
+                  <div className="flex flex-col">
+                    <a href="mailto:acropolis@hotmail.com" className="hover:text-secondary transition-colors">
+                      acropolis@hotmail.com
+                    </a>
+                    <a href="mailto:sales@gscacropolis.com" className="hover:text-secondary transition-colors">
+                      sales@gscacropolis.com
                     </a>
                   </div>
                 </div>

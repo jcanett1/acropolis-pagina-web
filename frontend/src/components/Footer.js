@@ -76,17 +76,11 @@ export default function Footer() {
               <Link to="/" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
                 {t('footer.home')}
               </Link>
-              <Link to="/quienes-somos" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
+              <a href="#about" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
                 {t('footer.aboutUs')}
-              </Link>
-              <a href="#features" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
-                {t('footer.features')}
               </a>
-              <a href="#contact" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
-                {t('footer.contact')}
-              </a>
-              <Link to="/login" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
-                {t('footer.login')}
+              <Link to="/servicios" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
+                {t('footer.ourServices')}
               </Link>
             </nav>
             {/* Language Selector in Footer */}
@@ -100,20 +94,26 @@ export default function Footer() {
             <h3 className="text-lg font-semibold">{t('footer.services')}</h3>
             <nav className="flex flex-col gap-2.5">
               <span className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300 cursor-pointer">
-                {t('footer.orderManagement')}
+                {t('footer.communication247')}
               </span>
-              <span className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300 cursor-pointer">
-                {t('footer.realTimeTracking')}
-              </span>
-              <span className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300 cursor-pointer">
-                {t('footer.supplierNetwork')}
-              </span>
-              <span className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300 cursor-pointer">
-                {t('footer.analyticsReports')}
-              </span>
-              <span className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300 cursor-pointer">
-                {t('footer.support247')}
-              </span>
+              <Link to="/servicios" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
+                {t('footer.provisions')}
+              </Link>
+              <Link to="/servicios" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
+                {t('footer.personalArticles')}
+              </Link>
+              <Link to="/servicios" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
+                {t('footer.navigationEquipment')}
+              </Link>
+              <Link to="/servicios" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
+                {t('footer.consumables')}
+              </Link>
+              <Link to="/servicios" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
+                {t('footer.cabin')}
+              </Link>
+              <Link to="/servicios" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
+                {t('footer.rescueEquipment')}
+              </Link>
             </nav>
           </div>
 
@@ -133,9 +133,14 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3 text-white/70">
                 <Mail className="w-5 h-5 text-blue-500 flex-shrink-0" />
-                <a href="mailto:contacto@mardecortez.com" className="text-sm hover:text-blue-500 transition-colors duration-300">
-                  contacto@mardecortez.com
-                </a>
+                <div className="flex flex-col">
+                  <a href="mailto:acropolis@hotmail.com" className="text-sm hover:text-blue-500 transition-colors duration-300">
+                    acropolis@hotmail.com
+                  </a>
+                  <a href="mailto:sales@gscacropolis.com" className="text-sm hover:text-blue-500 transition-colors duration-300">
+                    sales@gscacropolis.com
+                  </a>
+                </div>
               </div>
             </div>
 
