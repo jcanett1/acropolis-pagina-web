@@ -6,6 +6,7 @@ import Landing from '@/pages/Landing';
 import Login from '@/pages/Login';
 import Register from '@/pages/Register';
 import QuienesSomos from '@/pages/QuienesSomos';
+import Servicios from '@/pages/Servicios';
 import ClienteDashboard from '@/pages/ClienteDashboard';
 import ProveedorDashboard from '@/pages/ProveedorDashboard';
 import AdminDashboard from '@/pages/AdminDashboard';
@@ -58,6 +59,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/quienes-somos" element={<QuienesSomos />} />
+            <Route path="/servicios" element={<Servicios />} />
             <Route path="/login" element={user ? <Navigate to={user.role === 'admin' ? '/admin' : user.role === 'cliente' ? '/cliente' : '/proveedor'} /> : <Login />} />
             <Route path="/register" element={user ? <Navigate to={user.role === 'admin' ? '/admin' : user.role === 'cliente' ? '/cliente' : '/proveedor'} /> : <Register />} />
             <Route path="/cliente/*" element={user?.role === 'cliente' ? <ClienteDashboard /> : <Navigate to="/login" />} />

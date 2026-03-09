@@ -130,16 +130,23 @@ Aplicación web de e-procurement marítimo inspirada en seaproc.com, con tres po
 
 ### Rediseño Landing Page (Marzo 2026) ✅
 - **Eliminado**: Botón de Login y formulario de Registration Request del Hero
-- **Hero Section**: 3 botones - About Us, Our Services, Contact Us
-- **Nueva sección Services** con 6 categorías de suministros marítimos:
-  - Provisions (verde) - Frutas, Verduras, Pescados, Carnes
-  - Personal Articles (morado) - Bebidas, Cigarrillos, Chocolates
-  - Navigation Equipment (azul) - Cartas, Plotters, Radar, Comunicación
-  - Consumables Cover and Machines (naranja) - EPP, Repuestos, Cables
-  - Cabin (teal) - Limpieza, Cocina, Bar, Electrodomésticos
-  - Rescue Equipment (rojo) - Extintores, Balsas, Botiquín
-- **Nueva sección Testimonials** - "Find Out What Our Customers Say" con 3 reviews
-- **Nueva sección Contact** - Formulario de contacto con nombre, email, teléfono, mensaje
+- **Hero Section**: 2 botones - Our Services, Contact Us
+- **Contenido de "Quiénes Somos" integrado en Landing**:
+  - Our History (30+ years of experience)
+  - Our Mission (4 compromisos)
+  - Our Vision (visión a 5 años)
+  - Our Values (6 valores corporativos)
+  - Key Features (Cloud, Management, Tracking, Suppliers)
+  - Our Executive Team (6 ejecutivos con fotos)
+  - Our Certifications (IMPA, HACCP, ISO, etc.)
+  - Google Maps con ubicación
+  - Send A Message / Contact Form
+- **Nueva página `/servicios`** con:
+  - Hero: "Supply for Boats" + descripción
+  - "What We Offer" + "Empower your business with better logistics"
+  - 6 categorías de suministros marítimos (Provisions, Personal Articles, Navigation, Consumables, Cabin, Rescue)
+  - Testimonials: "Find Out What Our Customers Say" con 3 reviews
+  - Contact CTA con horario 24/7
 - **Nuevo endpoint**: `/api/contact-messages` para recibir mensajes de contacto
 
 ### Dashboard de Análisis para Admin (Febrero 2026) ✅
