@@ -49,6 +49,10 @@ export const translations = {
           desc: 'Connect with multiple suppliers and manage business relationships.'
         }
       },
+      ports: {
+        title: 'Make Acropolis Your Comprehensive Supplier',
+        subtitle: 'Your Partner in Mexican Ports'
+      },
       cta: {
         title: 'Ready to transform your purchasing management?',
         subtitle: 'Complete the form and our team will contact you.'
@@ -396,6 +400,10 @@ export const translations = {
           desc: 'Conecta con múltiples proveedores y gestiona relaciones comerciales.'
         }
       },
+      ports: {
+        title: 'Haz de Acropolis Tu Proveedor Integral',
+        subtitle: 'Tu Socio en Puertos Mexicanos'
+      },
       cta: {
         title: '¿Listo para transformar tu gestión de compras?',
         subtitle: 'Completa el formulario y nuestro equipo se pondrá en contacto contigo.'
@@ -742,6 +750,10 @@ export const translations = {
           title: '供应商网络',
           desc: '连接多个供应商并管理业务关系。'
         }
+      },
+      ports: {
+        title: '让Acropolis成为您的综合供应商',
+        subtitle: '您在墨西哥港口的合作伙伴'
       },
       cta: {
         title: '准备好转变您的采购管理了吗？',

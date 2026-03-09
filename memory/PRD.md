@@ -136,11 +136,13 @@ Aplicación web de e-procurement marítimo inspirada en seaproc.com, con tres po
   - Our Mission (4 compromisos)
   - Our Vision (visión a 5 años)
   - Our Values (6 valores corporativos)
-  - Key Features (Cloud, Management, Tracking, Suppliers)
-  - Our Executive Team (6 ejecutivos con fotos)
-  - Our Certifications (IMPA, HACCP, ISO, etc.)
-  - Google Maps con ubicación
-  - Send A Message / Contact Form
+  - **Make Acropolis Your Comprehensive Supplier** - 7 puertos mexicanos con imágenes:
+    - Guaymas (Sonora), Topolobampo (Sinaloa), Mazatlán (Sinaloa)
+    - Rosarito (Baja California), Ensenada (Baja California)
+    - Santa Rosalía (Baja California Sur), La Paz (Baja California Sur)
+  - Our Executive Team (6 ejecutivos)
+  - Our Certifications + Google Maps
+  - Contact Form (Send A Message)
 - **Nueva página `/servicios`** con:
   - Hero: "Supply for Boats" + descripción
   - "What We Offer" + "Empower your business with better logistics"

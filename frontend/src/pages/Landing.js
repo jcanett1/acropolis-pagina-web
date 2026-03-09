@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { 
   Ship, 
   Package, 
-  TrendingUp, 
   Users, 
   Target,
   Eye,
@@ -376,48 +375,128 @@ export default function Landing() {
         </div>
       </div>
 
-      {/* Features Section */}
+      {/* Mexican Ports Section */}
       <div className="py-24 px-4 bg-muted/30">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground" data-testid="features-heading">
-            {t('landing.features.title')}
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="card-hover" data-testid="feature-cloud">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Ship className="w-6 h-6 text-secondary" />
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" data-testid="ports-heading">
+              {t('landing.ports.title')}
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              {t('landing.ports.subtitle')}
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {/* Guaymas */}
+            <Card className="card-hover overflow-hidden group" data-testid="port-guaymas">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1770325529145-28d4be2866f4?w=400&h=300&fit=crop" 
+                  alt="Guaymas Port"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-xl font-bold">Guaymas</h3>
+                  <p className="text-white/80 text-sm">Sonora</p>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{t('landing.features.cloud.title')}</h3>
-                <p className="text-muted-foreground">{t('landing.features.cloud.desc')}</p>
-              </CardContent>
+              </div>
             </Card>
-            <Card className="card-hover" data-testid="feature-management">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Package className="w-6 h-6 text-secondary" />
+            
+            {/* Topolobampo */}
+            <Card className="card-hover overflow-hidden group" data-testid="port-topolobampo">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1769031929621-8f7989213604?w=400&h=300&fit=crop" 
+                  alt="Topolobampo Port"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-xl font-bold">Topolobampo</h3>
+                  <p className="text-white/80 text-sm">Sinaloa</p>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{t('landing.features.management.title')}</h3>
-                <p className="text-muted-foreground">{t('landing.features.management.desc')}</p>
-              </CardContent>
+              </div>
             </Card>
-            <Card className="card-hover" data-testid="feature-tracking">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
-                  <TrendingUp className="w-6 h-6 text-secondary" />
+            
+            {/* Mazatlán */}
+            <Card className="card-hover overflow-hidden group" data-testid="port-mazatlan">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1594485803100-06e659d20b17?w=400&h=300&fit=crop" 
+                  alt="Mazatlán Port"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-xl font-bold">Mazatlán</h3>
+                  <p className="text-white/80 text-sm">Sinaloa</p>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{t('landing.features.tracking.title')}</h3>
-                <p className="text-muted-foreground">{t('landing.features.tracking.desc')}</p>
-              </CardContent>
+              </div>
             </Card>
-            <Card className="card-hover" data-testid="feature-suppliers">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Users className="w-6 h-6 text-secondary" />
+            
+            {/* Rosarito */}
+            <Card className="card-hover overflow-hidden group" data-testid="port-rosarito">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1578982300147-69917167e0bb?w=400&h=300&fit=crop" 
+                  alt="Rosarito Port"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-xl font-bold">Rosarito</h3>
+                  <p className="text-white/80 text-sm">Baja California</p>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{t('landing.features.suppliers.title')}</h3>
-                <p className="text-muted-foreground">{t('landing.features.suppliers.desc')}</p>
-              </CardContent>
+              </div>
+            </Card>
+            
+            {/* Ensenada */}
+            <Card className="card-hover overflow-hidden group" data-testid="port-ensenada">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1701887370883-f3865600c94b?w=400&h=300&fit=crop" 
+                  alt="Ensenada Port"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-xl font-bold">Ensenada</h3>
+                  <p className="text-white/80 text-sm">Baja California</p>
+                </div>
+              </div>
+            </Card>
+            
+            {/* Santa Rosalía */}
+            <Card className="card-hover overflow-hidden group" data-testid="port-santa-rosalia">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="https://images.pexels.com/photos/5648855/pexels-photo-5648855.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" 
+                  alt="Santa Rosalía Port"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-xl font-bold">Santa Rosalía</h3>
+                  <p className="text-white/80 text-sm">Baja California Sur</p>
+                </div>
+              </div>
+            </Card>
+            
+            {/* La Paz */}
+            <Card className="card-hover overflow-hidden group" data-testid="port-la-paz">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="https://images.pexels.com/photos/36284328/pexels-photo-36284328.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" 
+                  alt="La Paz Port"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-xl font-bold">La Paz</h3>
+                  <p className="text-white/80 text-sm">Baja California Sur</p>
+                </div>
+              </div>
             </Card>
           </div>
         </div>
