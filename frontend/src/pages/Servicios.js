@@ -19,14 +19,44 @@ import Footer from '@/components/Footer';
 import LanguageSelector from '@/components/LanguageSelector';
 import { useLanguage } from '@/i18n/LanguageContext';
 
-// Service categories with icons
+// Service categories with icons and images
 const serviceCategories = [
-  { key: 'provisions', icon: Apple, color: 'bg-green-500' },
-  { key: 'personal', icon: Wine, color: 'bg-purple-500' },
-  { key: 'navigation', icon: Compass, color: 'bg-blue-500' },
-  { key: 'consumables', icon: Wrench, color: 'bg-orange-500' },
-  { key: 'cabin', icon: Home, color: 'bg-teal-500' },
-  { key: 'rescue', icon: LifeBuoy, color: 'bg-red-500' },
+  { 
+    key: 'provisions', 
+    icon: Apple, 
+    color: 'bg-green-500',
+    image: 'https://images.unsplash.com/photo-1650012048722-c81295ccbe79?w=400&h=200&fit=crop'
+  },
+  { 
+    key: 'personal', 
+    icon: Wine, 
+    color: 'bg-purple-500',
+    image: 'https://images.unsplash.com/photo-1536118253180-b885be68d20b?w=400&h=200&fit=crop'
+  },
+  { 
+    key: 'navigation', 
+    icon: Compass, 
+    color: 'bg-blue-500',
+    image: 'https://images.unsplash.com/photo-1568615354554-8328579fe87e?w=400&h=200&fit=crop'
+  },
+  { 
+    key: 'consumables', 
+    icon: Wrench, 
+    color: 'bg-orange-500',
+    image: 'https://images.unsplash.com/photo-1764114441097-6a475eca993d?w=400&h=200&fit=crop'
+  },
+  { 
+    key: 'cabin', 
+    icon: Home, 
+    color: 'bg-teal-500',
+    image: 'https://images.unsplash.com/photo-1651902387099-787f4a62a3e3?w=400&h=200&fit=crop'
+  },
+  { 
+    key: 'rescue', 
+    icon: LifeBuoy, 
+    color: 'bg-red-500',
+    image: 'https://images.unsplash.com/photo-1758716147082-c2d332b1aed9?w=400&h=200&fit=crop'
+  },
 ];
 
 export default function Servicios() {
@@ -116,12 +146,22 @@ export default function Servicios() {
             {serviceCategories.map((service) => (
               <Card key={service.key} className="card-hover overflow-hidden group" data-testid={`service-${service.key}`}>
                 <CardContent className="p-0">
-                  <div className={`${service.color} p-6 flex items-center gap-4 transition-all group-hover:scale-105`}>
-                    <div className="w-14 h-14 bg-white/20 rounded-lg flex items-center justify-center">
-                      <service.icon className="w-7 h-7 text-white" />
+                  {/* Image Header */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={service.image}
+                      alt={t(`landing.services.${service.key}.title`)}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3">
+                      <div className={`w-12 h-12 ${service.color} rounded-lg flex items-center justify-center`}>
+                        <service.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <h4 className="text-xl font-bold text-white">{t(`landing.services.${service.key}.title`)}</h4>
                     </div>
-                    <h4 className="text-xl font-bold text-white">{t(`landing.services.${service.key}.title`)}</h4>
                   </div>
+                  {/* Items List */}
                   <div className="p-6">
                     <ul className="space-y-2">
                       {getServiceItems(service.key).map((item, idx) => (
