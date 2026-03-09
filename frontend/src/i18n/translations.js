@@ -26,7 +26,9 @@ export const translations = {
         subtitle: 'Your trusted partner for maritime fleet supply. Total reliability, unmatched efficiency.',
         tagline: 'Your safe harbor, in any port.',
         loginBtn: 'Login',
-        aboutBtn: 'About Us'
+        aboutBtn: 'About Us',
+        servicesBtn: 'Our Services',
+        contactBtn: 'Contact Us'
       },
       features: {
         title: 'Key Features',
@@ -75,6 +77,64 @@ export const translations = {
         submit: 'Submit Request',
         success: 'Request submitted successfully! We will contact you soon.',
         error: 'Error submitting request'
+      },
+      services: {
+        breadcrumb: 'Home » Services',
+        title: 'Supply for Boats',
+        subtitle: "Get all your boat supplies at Mexico's ports with us: Fresh provisions, personal items, navigation gear, deck consumables, cabin & safety equipment!",
+        whatWeOffer: 'What We Offer',
+        empowerTitle: 'Empower your business with better logistics',
+        empowerSubtitle: 'Discover the best in maritime supply in the ports of Mexico: high quality products and exceptional service for your trip.',
+        provisions: {
+          title: 'Provisions',
+          items: ['Fruits, Vegetables and Seeds', 'Fish and Seafood', 'Sausages', 'Red Meat and Fine Cuts', 'Cold meats']
+        },
+        personal: {
+          title: 'Personal Articles',
+          items: ['Beer', 'Cigarettes', 'Chocolates', 'Drinks and Soft Drinks', 'Wines and Spirits', 'Botany', 'Cookies']
+        },
+        navigation: {
+          title: 'Navigation Equipment',
+          items: ['Letters and Publications', 'Plotters and Screens', 'Radar and Cameras', 'Communication Equipment', 'Radar and Locators']
+        },
+        consumables: {
+          title: 'Consumables Cover and Machines',
+          items: ['Sea Capes', 'Personal Protection Equipment', 'Import of Spare Parts', 'Tubes, Connections and Valves', 'Measuring Tools and Equipment', 'Cables and Electrical Equipment', 'Welding Equipment']
+        },
+        cabin: {
+          title: 'Cabin',
+          items: ['Cleaning and Hygiene Supplies', 'Kitchen Utensils', 'Bar Utensils', 'White Line and Appliances', 'Hardware Store', 'Office Items', 'Training & Fitness', 'Drinking Water']
+        },
+        rescue: {
+          title: 'Rescue Equipment',
+          items: ['Extinguishers and Recharges', 'Emergency Signals and Whistles', 'Rafts and Life Jackets', 'Emergency Drinking Water Rations', 'Emergency Food Rations', 'First Aid Kit', 'Fire Fighting Equipment', 'Reflectors and Lights']
+        }
+      },
+      testimonials: {
+        title: 'Find Out What Our Customers Say',
+        reviews: [
+          { name: 'Captain James Morrison', company: 'Pacific Explorer', text: 'Exceptional service and quality products. They have been our trusted supplier for over 5 years.' },
+          { name: 'Maria Santos', company: 'Oceanic Fleet', text: 'Fast delivery and excellent customer support. Highly recommended for all maritime needs.' },
+          { name: 'Robert Chen', company: 'Global Shipping Co.', text: 'The best maritime supply service in Mexico. Professional team and competitive prices.' }
+        ]
+      },
+      contact: {
+        title: 'Send A Message',
+        subtitle: 'Contact Us',
+        description: 'Contact us for any inquiries or to utilize our services. We are committed to providing prompt assistance and ensuring your complete satisfaction.',
+        availability: 'Opening hours 24/7, 365 days a year.',
+        name: 'Your Name',
+        namePlaceholder: 'John Smith',
+        email: 'Your Email',
+        emailPlaceholder: 'john@example.com',
+        phone: 'Phone Number',
+        phonePlaceholder: '+1 234 567 8900',
+        message: 'Your Message',
+        messagePlaceholder: 'How can we help you?',
+        submit: 'Send Message',
+        submitting: 'Sending...',
+        success: 'Message sent successfully! We will contact you soon.',
+        error: 'Error sending message. Please try again.'
       }
     },
     // About Us Page
@@ -313,7 +373,9 @@ export const translations = {
         subtitle: 'Tu socio de confianza para el abastecimiento de flotas marítimas. Confiabilidad total, eficiencia incomparable.',
         tagline: 'Tu puerto seguro, en cualquier puerto.',
         loginBtn: 'Iniciar Sesión',
-        aboutBtn: 'Quiénes Somos'
+        aboutBtn: 'Quiénes Somos',
+        servicesBtn: 'Nuestros Servicios',
+        contactBtn: 'Contáctanos'
       },
       features: {
         title: 'Características Principales',
@@ -362,6 +424,64 @@ export const translations = {
         submit: 'Enviar Solicitud',
         success: '¡Solicitud enviada! Nos pondremos en contacto contigo pronto.',
         error: 'Error al enviar solicitud'
+      },
+      services: {
+        breadcrumb: 'Inicio » Servicios',
+        title: 'Suministros para Barcos',
+        subtitle: 'Obtén todos los suministros para tu barco en los puertos de México con nosotros: Provisiones frescas, artículos personales, equipo de navegación, consumibles de cubierta, equipo de cabina y seguridad.',
+        whatWeOffer: 'Lo Que Ofrecemos',
+        empowerTitle: 'Potencia tu negocio con mejor logística',
+        empowerSubtitle: 'Descubre lo mejor en suministro marítimo en los puertos de México: productos de alta calidad y servicio excepcional para tu viaje.',
+        provisions: {
+          title: 'Provisiones',
+          items: ['Frutas, Verduras y Semillas', 'Pescados y Mariscos', 'Embutidos', 'Carnes Rojas y Cortes Finos', 'Fiambres']
+        },
+        personal: {
+          title: 'Artículos Personales',
+          items: ['Cerveza', 'Cigarrillos', 'Chocolates', 'Bebidas y Refrescos', 'Vinos y Licores', 'Botánica', 'Galletas']
+        },
+        navigation: {
+          title: 'Equipo de Navegación',
+          items: ['Cartas y Publicaciones', 'Plotters y Pantallas', 'Radar y Cámaras', 'Equipo de Comunicación', 'Radar y Localizadores']
+        },
+        consumables: {
+          title: 'Consumibles de Cubierta y Máquinas',
+          items: ['Capas de Mar', 'Equipo de Protección Personal', 'Importación de Repuestos', 'Tubos, Conexiones y Válvulas', 'Herramientas y Equipo de Medición', 'Cables y Equipo Eléctrico', 'Equipo de Soldadura']
+        },
+        cabin: {
+          title: 'Cabina',
+          items: ['Suministros de Limpieza e Higiene', 'Utensilios de Cocina', 'Utensilios de Bar', 'Línea Blanca y Electrodomésticos', 'Ferretería', 'Artículos de Oficina', 'Entrenamiento y Fitness', 'Agua Potable']
+        },
+        rescue: {
+          title: 'Equipo de Rescate',
+          items: ['Extintores y Recargas', 'Señales de Emergencia y Silbatos', 'Balsas y Chalecos Salvavidas', 'Raciones de Agua de Emergencia', 'Raciones de Comida de Emergencia', 'Botiquín de Primeros Auxilios', 'Equipo Contra Incendios', 'Reflectores y Luces']
+        }
+      },
+      testimonials: {
+        title: 'Descubre Lo Que Dicen Nuestros Clientes',
+        reviews: [
+          { name: 'Capitán James Morrison', company: 'Pacific Explorer', text: 'Servicio excepcional y productos de calidad. Han sido nuestro proveedor de confianza por más de 5 años.' },
+          { name: 'María Santos', company: 'Flota Oceánica', text: 'Entrega rápida y excelente soporte al cliente. Altamente recomendado para todas las necesidades marítimas.' },
+          { name: 'Roberto Chen', company: 'Global Shipping Co.', text: 'El mejor servicio de suministro marítimo en México. Equipo profesional y precios competitivos.' }
+        ]
+      },
+      contact: {
+        title: 'Envía un Mensaje',
+        subtitle: 'Contáctanos',
+        description: 'Contáctanos para cualquier consulta o para utilizar nuestros servicios. Estamos comprometidos a brindar asistencia rápida y garantizar tu completa satisfacción.',
+        availability: 'Horario de atención 24/7, 365 días al año.',
+        name: 'Tu Nombre',
+        namePlaceholder: 'Juan Pérez',
+        email: 'Tu Correo',
+        emailPlaceholder: 'juan@ejemplo.com',
+        phone: 'Número de Teléfono',
+        phonePlaceholder: '+52 123 456 7890',
+        message: 'Tu Mensaje',
+        messagePlaceholder: '¿Cómo podemos ayudarte?',
+        submit: 'Enviar Mensaje',
+        submitting: 'Enviando...',
+        success: '¡Mensaje enviado exitosamente! Nos pondremos en contacto contigo pronto.',
+        error: 'Error al enviar mensaje. Por favor intenta de nuevo.'
       }
     },
     // About Us Page
@@ -600,7 +720,9 @@ export const translations = {
         subtitle: '您值得信赖的海上船队供应合作伙伴。完全可靠，无与伦比的效率。',
         tagline: '您的安全港湾，在任何港口。',
         loginBtn: '登录',
-        aboutBtn: '关于我们'
+        aboutBtn: '关于我们',
+        servicesBtn: '我们的服务',
+        contactBtn: '联系我们'
       },
       features: {
         title: '主要功能',
@@ -649,6 +771,64 @@ export const translations = {
         submit: '提交申请',
         success: '申请提交成功！我们将很快与您联系。',
         error: '提交申请时出错'
+      },
+      services: {
+        breadcrumb: '首页 » 服务',
+        title: '船舶供应',
+        subtitle: '在墨西哥港口获取所有船舶供应：新鲜食品、个人用品、导航设备、甲板消耗品、船舱和安全设备！',
+        whatWeOffer: '我们提供什么',
+        empowerTitle: '用更好的物流增强您的业务',
+        empowerSubtitle: '发现墨西哥港口最好的海事供应：为您的旅程提供高质量的产品和卓越的服务。',
+        provisions: {
+          title: '食品供应',
+          items: ['水果、蔬菜和种子', '鱼类和海鲜', '香肠', '红肉和精选肉类', '冷盘']
+        },
+        personal: {
+          title: '个人用品',
+          items: ['啤酒', '香烟', '巧克力', '饮料和软饮料', '葡萄酒和烈酒', '植物', '饼干']
+        },
+        navigation: {
+          title: '导航设备',
+          items: ['海图和出版物', '绘图仪和屏幕', '雷达和摄像机', '通信设备', '雷达和定位器']
+        },
+        consumables: {
+          title: '甲板和机器消耗品',
+          items: ['海用油布', '个人防护设备', '备件进口', '管道、接头和阀门', '测量工具和设备', '电缆和电气设备', '焊接设备']
+        },
+        cabin: {
+          title: '船舱',
+          items: ['清洁和卫生用品', '厨房用具', '酒吧用具', '家电', '五金店', '办公用品', '培训和健身', '饮用水']
+        },
+        rescue: {
+          title: '救援设备',
+          items: ['灭火器和充电', '紧急信号和哨子', '救生筏和救生衣', '紧急饮用水配给', '紧急食品配给', '急救箱', '消防设备', '反光镜和灯']
+        }
+      },
+      testimonials: {
+        title: '了解客户对我们的评价',
+        reviews: [
+          { name: '詹姆斯·莫里森船长', company: 'Pacific Explorer', text: '卓越的服务和优质的产品。他们是我们值得信赖的供应商超过5年。' },
+          { name: '玛丽亚·桑托斯', company: '远洋船队', text: '快速交付和出色的客户支持。强烈推荐用于所有海事需求。' },
+          { name: '罗伯特·陈', company: 'Global Shipping Co.', text: '墨西哥最好的海事供应服务。专业团队和有竞争力的价格。' }
+        ]
+      },
+      contact: {
+        title: '发送消息',
+        subtitle: '联系我们',
+        description: '如有任何疑问或使用我们的服务，请联系我们。我们致力于提供及时的帮助并确保您完全满意。',
+        availability: '营业时间 24/7，全年365天。',
+        name: '您的姓名',
+        namePlaceholder: '张三',
+        email: '您的邮箱',
+        emailPlaceholder: 'zhang@example.com',
+        phone: '电话号码',
+        phonePlaceholder: '+86 123 456 7890',
+        message: '您的消息',
+        messagePlaceholder: '我们能帮您什么？',
+        submit: '发送消息',
+        submitting: '发送中...',
+        success: '消息发送成功！我们将很快与您联系。',
+        error: '发送消息时出错。请重试。'
       }
     },
     // About Us Page

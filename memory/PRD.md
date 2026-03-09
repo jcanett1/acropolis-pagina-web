@@ -120,13 +120,27 @@ Aplicación web de e-procurement marítimo inspirada en seaproc.com, con tres po
 - **Selector de idioma** en esquina superior derecha con banderas
 - **Persistencia**: El idioma seleccionado se guarda en localStorage
 - **Páginas traducidas**:
-  - Landing: Hero, Features, CTA, Formulario de Registro
+  - Landing: Hero, Services, Features, Testimonials, Contact Form
   - QuienesSomos: Hero, Historia, Misión, Visión, Valores, Equipo Ejecutivo, Contacto, CTA, Certificaciones
   - Footer: Quick Links, Services, Contact Us, Newsletter, Privacy/Terms/Cookies
 - **Arquitectura i18n**:
   - `/app/frontend/src/i18n/translations.js` - Todas las traducciones
   - `/app/frontend/src/i18n/LanguageContext.js` - React Context para i18n
   - `/app/frontend/src/components/LanguageSelector.js` - Componente de selección
+
+### Rediseño Landing Page (Marzo 2026) ✅
+- **Eliminado**: Botón de Login y formulario de Registration Request del Hero
+- **Hero Section**: 3 botones - About Us, Our Services, Contact Us
+- **Nueva sección Services** con 6 categorías de suministros marítimos:
+  - Provisions (verde) - Frutas, Verduras, Pescados, Carnes
+  - Personal Articles (morado) - Bebidas, Cigarrillos, Chocolates
+  - Navigation Equipment (azul) - Cartas, Plotters, Radar, Comunicación
+  - Consumables Cover and Machines (naranja) - EPP, Repuestos, Cables
+  - Cabin (teal) - Limpieza, Cocina, Bar, Electrodomésticos
+  - Rescue Equipment (rojo) - Extintores, Balsas, Botiquín
+- **Nueva sección Testimonials** - "Find Out What Our Customers Say" con 3 reviews
+- **Nueva sección Contact** - Formulario de contacto con nombre, email, teléfono, mensaje
+- **Nuevo endpoint**: `/api/contact-messages` para recibir mensajes de contacto
 
 ### Dashboard de Análisis para Admin (Febrero 2026) ✅
 - **Gráfico de Pastel**: Órdenes por Estado (Pendiente, Recibido, En Proceso, Completado, Cancelado)

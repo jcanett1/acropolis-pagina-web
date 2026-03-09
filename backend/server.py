@@ -198,6 +198,22 @@ class CategoryCreate(BaseModel):
     slug: str
     description: Optional[str] = None
 
+class ContactMessage(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+    id: str
+    name: str
+    email: EmailStr
+    phone: Optional[str] = None
+    message: str
+    created_at: str
+    read: bool = False
+
+class ContactMessageCreate(BaseModel):
+    name: str
+    email: EmailStr
+    phone: Optional[str] = None
+    message: str
+
 class UserCreate(BaseModel):
     email: EmailStr
     password: str
@@ -865,6 +881,24 @@ async def create_registration_request(request_data: RegistrationRequestCreate):
     await db.registration_requests.insert_one(request_doc)
     
     return {"message": "Solicitud enviada exitosamente. El equipo de Mar de Cortez se pondrá en contacto contigo.", "id": request_id}
+
+# Contact Messages Routes (Public)
+@api_router.post("/contact-messages")
+async def create_contact_message(message_data: ContactMessageCreate):
+    message_id = str(uuid.uuid4())
+    message_doc = {
+        "id": message_id,
+        "name": message_data.name,
+        "email": message_data.email,
+        "phone": message_data.phone,
+        "message": message_data.message,
+        "created_at": datetime.now(timezone.utc).isoformat(),
+        "read": False
+    }
+    
+    await db.contact_messages.insert_one(message_doc)
+    
+    return {"message": "Mensaje enviado exitosamente. Nos pondremos en contacto contigo pronto.", "id": message_id}
 
 # Admin Routes
 @api_router.get("/admin/registration-requests", response_model=List[RegistrationRequest])
