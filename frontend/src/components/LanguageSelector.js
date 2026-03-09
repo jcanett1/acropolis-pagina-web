@@ -20,9 +20,12 @@ export default function LanguageSelector({ variant = 'default', className = '' }
           className={`gap-2 ${className}`}
           data-testid="language-selector"
         >
-          <Globe className="h-4 w-4" />
-          <span className="hidden sm:inline">{languageFlags[language]} {languageNames[language]}</span>
-          <span className="sm:hidden">{languageFlags[language]}</span>
+          <img 
+            src={languageFlags[language]} 
+            alt={languageNames[language]}
+            className="w-5 h-4 object-cover rounded-sm"
+          />
+          <span className="hidden sm:inline">{languageNames[language]}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="min-w-[150px]">
@@ -33,7 +36,11 @@ export default function LanguageSelector({ variant = 'default', className = '' }
             className={`cursor-pointer ${language === lang ? 'bg-accent' : ''}`}
             data-testid={`lang-${lang}`}
           >
-            <span className="mr-2 text-lg">{languageFlags[lang]}</span>
+            <img 
+              src={languageFlags[lang]} 
+              alt={languageNames[lang]}
+              className="w-6 h-4 object-cover rounded-sm mr-3"
+            />
             <span>{languageNames[lang]}</span>
             {language === lang && (
               <span className="ml-auto text-primary">✓</span>

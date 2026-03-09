@@ -1071,9 +1071,9 @@ export const languageNames = {
   zh: '中文'
 };
 
-// Banderas de idiomas
+// Banderas de idiomas - usando imágenes de flagcdn.com
 export const languageFlags = {
-  en: '🇺🇸',
-  es: '🇲🇽',
-  zh: '🇨🇳'
+  en: 'https://flagcdn.com/w40/us.png',
+  es: 'https://flagcdn.com/w40/mx.png',
+  zh: 'https://flagcdn.com/w40/cn.png'
 };
