@@ -78,38 +78,14 @@ const ejecutivos = [
   }
 ];
 
-// Valores corporativos
-const valores = [
-  {
-    icon: Shield,
-    titulo: 'Confianza y Seguridad',
-    descripcion: 'La base de 30 años de relaciones duraderas con nuestros clientes y socios.'
-  },
-  {
-    icon: Clock,
-    titulo: 'Eficiencia y Puntualidad',
-    descripcion: 'Entregas a tiempo, cada vez. Comprometidos con la continuidad de sus operaciones.'
-  },
-  {
-    icon: Globe,
-    titulo: 'Alcance y Conexión',
-    descripcion: 'Fortaleza en nuestra red de proveedores y puertos aliados en toda la región.'
-  },
-  {
-    icon: Users,
-    titulo: 'Trabajo en Equipo',
-    descripcion: 'Colaboración interna y con socios para lograr resultados excepcionales.'
-  },
-  {
-    icon: Leaf,
-    titulo: 'Sostenibilidad',
-    descripcion: 'Compromiso con prácticas responsables y el cuidado del medio ambiente marino.'
-  },
-  {
-    icon: Heart,
-    titulo: 'Servicio Personalizado',
-    descripcion: 'Atención dedicada y soluciones adaptadas a las necesidades de cada cliente.'
-  }
+// Valores corporativos - keys for translation
+const valoresKeys = [
+  { icon: Shield, key: 'trust' },
+  { icon: Clock, key: 'efficiency' },
+  { icon: Globe, key: 'reach' },
+  { icon: Users, key: 'teamwork' },
+  { icon: Leaf, key: 'sustainability' },
+  { icon: Heart, key: 'service' }
 ];
 
 export default function QuienesSomos() {
@@ -200,7 +176,7 @@ export default function QuienesSomos() {
               />
               <div className="absolute -bottom-6 -right-6 bg-secondary text-secondary-foreground p-6 rounded-xl shadow-xl">
                 <p className="text-4xl font-bold">30+</p>
-                <p className="text-sm">Años de experiencia</p>
+                <p className="text-sm">{t('footer.yearsExperience')}</p>
               </div>
             </div>
           </div>
@@ -223,37 +199,37 @@ export default function QuienesSomos() {
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                   <Target className="h-6 w-6 text-primary" />
                 </div>
-                <h2 className="text-3xl font-bold text-foreground">Nuestra Misión</h2>
+                <h2 className="text-3xl font-bold text-foreground">{t('about.mission.title')}</h2>
               </div>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Nuestra misión es ser el <strong className="text-foreground">socio de abastecimiento y servicios preferido</strong> para las flotas mercantes, tanto en nuestro puerto base como en la red de puertos aliados.
+                  {t('about.mission.intro')}
                 </p>
-                <p className="font-medium text-foreground">Nos comprometemos a:</p>
+                <p className="font-medium text-foreground">{t('about.mission.commitment')}</p>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-secondary/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-secondary rounded-full"></div>
                     </div>
-                    <span>Proveer soluciones logísticas integrales (avituallamiento, combustible, repuestos, provisiones) con calidad, puntualidad y competitividad.</span>
+                    <span>{t('about.mission.item1')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-secondary/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-secondary rounded-full"></div>
                     </div>
-                    <span>Fortalecer y expandir continuamente nuestra red de colaboración con otros puertos y proveedores certificados.</span>
+                    <span>{t('about.mission.item2')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-secondary/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-secondary rounded-full"></div>
                     </div>
-                    <span>Operar con los más altos estándares de seguridad, ética y sostenibilidad.</span>
+                    <span>{t('about.mission.item3')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-secondary/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-secondary rounded-full"></div>
                     </div>
-                    <span>Anticiparnos a las necesidades del sector con un servicio personalizado y flexible.</span>
+                    <span>{t('about.mission.item4')}</span>
                   </li>
                 </ul>
               </div>
@@ -271,22 +247,22 @@ export default function QuienesSomos() {
                 <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center">
                   <Eye className="h-6 w-6 text-secondary" />
                 </div>
-                <h2 className="text-3xl font-bold text-foreground">Nuestra Visión</h2>
+                <h2 className="text-3xl font-bold text-foreground">{t('about.vision.title')}</h2>
               </div>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Aspiramos a ser reconocidos, en los próximos cinco años, como la <strong className="text-foreground">red de abastecimiento marítimo más confiable y de mayor cobertura en la región</strong>.
+                  {t('about.vision.p1')}
                 </p>
                 <p>
-                  Seremos el puente indispensable entre los buques mercantes y los recursos que necesitan en cualquier puerto de nuestra alianza.
+                  {t('about.vision.p2')}
                 </p>
                 <p>
-                  <strong className="text-foreground">Lideraremos la innovación en servicios portuarios</strong>, siendo el referente en eficiencia, alcance y partnership estratégico para las navieras del mundo.
+                  {t('about.vision.p3')}
                 </p>
               </div>
               <div className="mt-8 p-6 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-xl border border-primary/10">
                 <p className="text-lg font-semibold text-foreground text-center italic">
-                  "30 años conectando el mar con lo que necesitas"
+                  "{t('about.hero.badge')}"
                 </p>
               </div>
             </div>
@@ -310,21 +286,21 @@ export default function QuienesSomos() {
                 <Heart className="h-6 w-6 text-white" />
               </div>
             </div>
-            <h2 className="text-4xl font-bold text-white mb-4">Nuestros Valores</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">{t('about.values.title')}</h2>
             <p className="text-xl text-white/80 max-w-2xl mx-auto">
-              Los principios que guían cada una de nuestras acciones y decisiones
+              {t('about.values.subtitle')}
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {valores.map((valor, index) => (
+            {valoresKeys.map((valor, index) => (
               <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center mb-4">
                     <valor.icon className="h-6 w-6 text-secondary" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{valor.titulo}</h3>
-                  <p className="text-white/70">{valor.descripcion}</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">{t(`about.values.${valor.key}.title`)}</h3>
+                  <p className="text-white/70">{t(`about.values.${valor.key}.desc`)}</p>
                 </CardContent>
               </Card>
             ))}
@@ -341,9 +317,9 @@ export default function QuienesSomos() {
                 <Users className="h-6 w-6 text-primary" />
               </div>
             </div>
-            <h2 className="text-4xl font-bold text-foreground mb-4">Nuestro Equipo Ejecutivo</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-4">{t('about.team.title')}</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Profesionales comprometidos con tu éxito y la excelencia en el servicio
+              {t('about.team.subtitle')}
             </p>
           </div>
 
@@ -392,7 +368,7 @@ export default function QuienesSomos() {
           <div className="mt-16 text-center">
             <Card className="max-w-xl mx-auto bg-gradient-to-r from-primary/5 to-secondary/5 border-primary/10">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-4">Contacto Corporativo</h3>
+                <h3 className="text-2xl font-bold mb-4">{t('about.contact.title')}</h3>
                 <div className="space-y-4">
                   <div className="flex items-center justify-center gap-3">
                     <Mail className="h-5 w-5 text-secondary" />
@@ -408,7 +384,7 @@ export default function QuienesSomos() {
                   </div>
                 </div>
                 <p className="mt-4 text-sm text-muted-foreground">
-                  Dominio corporativo: @mardecortez.com
+                  {t('about.contact.domain')}
                 </p>
               </CardContent>
             </Card>

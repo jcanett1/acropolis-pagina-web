@@ -97,29 +97,29 @@ export default function Footer() {
 
           {/* Services */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-lg font-semibold">Servicios</h3>
+            <h3 className="text-lg font-semibold">{t('footer.services')}</h3>
             <nav className="flex flex-col gap-2.5">
               <span className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300 cursor-pointer">
-                Gestión de Órdenes
+                {t('footer.orderManagement')}
               </span>
               <span className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300 cursor-pointer">
-                Seguimiento en Tiempo Real
+                {t('footer.realTimeTracking')}
               </span>
               <span className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300 cursor-pointer">
-                Red de Proveedores
+                {t('footer.supplierNetwork')}
               </span>
               <span className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300 cursor-pointer">
-                Análisis y Reportes
+                {t('footer.analyticsReports')}
               </span>
               <span className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300 cursor-pointer">
-                Soporte Técnico 24/7
+                {t('footer.support247')}
               </span>
             </nav>
           </div>
 
           {/* Contact Info */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-lg font-semibold">Contáctanos</h3>
+            <h3 className="text-lg font-semibold">{t('footer.contactUs')}</h3>
             <div className="flex flex-col gap-4">
               <div className="flex items-start gap-3 text-white/70">
                 <MapPin className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
@@ -141,11 +141,11 @@ export default function Footer() {
 
             {/* Newsletter */}
             <div className="pt-4">
-              <h4 className="text-sm font-medium mb-3">Suscríbete a nuestro boletín</h4>
+              <h4 className="text-sm font-medium mb-3">{t('footer.newsletter')}</h4>
               <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
                 <input
                   type="email"
-                  placeholder="Tu correo"
+                  placeholder={t('footer.yourEmail')}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -173,13 +173,13 @@ export default function Footer() {
           </p>
           <div className="flex gap-6 justify-center">
             <a href="#" className="text-white/60 text-sm hover:text-white transition-colors duration-300">
-              Privacy Policy
+              {t('footer.privacyPolicy')}
             </a>
             <a href="#" className="text-white/60 text-sm hover:text-white transition-colors duration-300">
-              Terms & Conditions
+              {t('footer.termsConditions')}
             </a>
             <a href="#" className="text-white/60 text-sm hover:text-white transition-colors duration-300">
-              Cookies
+              {t('footer.cookies')}
             </a>
           </div>
         </div>

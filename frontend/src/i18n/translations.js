@@ -260,7 +260,11 @@ export const translations = {
       support247: '24/7 Technical Support',
       newsletter: 'Subscribe to our newsletter',
       yourEmail: 'Your email',
-      newsletterSuccess: 'Thanks for subscribing! We will send news to:'
+      newsletterSuccess: 'Thanks for subscribing! We will send news to:',
+      privacyPolicy: 'Privacy Policy',
+      termsConditions: 'Terms & Conditions',
+      cookies: 'Cookies',
+      yearsExperience: 'Years of experience'
     },
     // Common
     common: {
@@ -543,7 +547,11 @@ export const translations = {
       support247: 'Soporte Técnico 24/7',
       newsletter: 'Suscríbete a nuestro boletín',
       yourEmail: 'Tu correo',
-      newsletterSuccess: '¡Gracias por suscribirte! Te enviaremos noticias a:'
+      newsletterSuccess: '¡Gracias por suscribirte! Te enviaremos noticias a:',
+      privacyPolicy: 'Política de Privacidad',
+      termsConditions: 'Términos y Condiciones',
+      cookies: 'Cookies',
+      yearsExperience: 'Años de experiencia'
     },
     // Common
     common: {
@@ -826,7 +834,11 @@ export const translations = {
       support247: '24/7技术支持',
       newsletter: '订阅我们的新闻',
       yourEmail: '您的电子邮件',
-      newsletterSuccess: '感谢订阅！我们将向您发送新闻：'
+      newsletterSuccess: '感谢订阅！我们将向您发送新闻：',
+      privacyPolicy: '隐私政策',
+      termsConditions: '条款和条件',
+      cookies: 'Cookies',
+      yearsExperience: '年经验'
     },
     // Common
     common: {
