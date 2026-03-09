@@ -59,12 +59,12 @@ Aplicación web de e-procurement marítimo inspirada en seaproc.com, con tres po
 
 ### P1 - Próximas
 - [ ] Integrar servicio de envío de correos (Resend/SendGrid) para notificaciones
+- [ ] Funcionalidad "Guardar como Borrador" en creación de órdenes
 
 ### P2 - Futuras
-- [ ] Dashboard de Análisis para admin con gráficos
-- [ ] Funcionalidad "Guardar como Borrador" en creación de órdenes
 - [ ] Plantillas de órdenes para compras frecuentes
 - [ ] Log de auditoría para portal admin
+- [ ] Exportar reportes del dashboard a PDF/Excel
 
 ---
 
@@ -83,11 +83,15 @@ Aplicación web de e-procurement marítimo inspirada en seaproc.com, con tres po
         ├── App.js
         ├── components/
         │   ├── Footer.js
+        │   ├── LanguageSelector.js  <-- NUEVO
         │   └── Sidebar.js
+        ├── i18n/                     <-- NUEVO
+        │   ├── LanguageContext.js
+        │   └── translations.js
         └── pages/
             ├── Landing.js
             ├── Login.js
-            ├── QuienesSomos.js  <-- NUEVO
+            ├── QuienesSomos.js
             ├── cliente/
             │   ├── CrearOrden.js
             │   ├── Seguimiento.js
@@ -108,10 +112,23 @@ Aplicación web de e-procurement marítimo inspirada en seaproc.com, con tres po
 ---
 
 ## Última Actualización
-**Fecha:** Febrero 2026
+**Fecha:** Marzo 2026
 **Cambios:**
 
-### Dashboard de Análisis para Admin (P2) ✅
+### Internacionalización (i18n) Completada ✅
+- **3 idiomas soportados**: Inglés (en), Español (es), Chino (zh)
+- **Selector de idioma** en esquina superior derecha con banderas
+- **Persistencia**: El idioma seleccionado se guarda en localStorage
+- **Páginas traducidas**:
+  - Landing: Hero, Features, CTA, Formulario de Registro
+  - QuienesSomos: Hero, Historia, Misión, Visión, Valores, Equipo Ejecutivo, Contacto, CTA, Certificaciones
+  - Footer: Quick Links, Services, Contact Us, Newsletter, Privacy/Terms/Cookies
+- **Arquitectura i18n**:
+  - `/app/frontend/src/i18n/translations.js` - Todas las traducciones
+  - `/app/frontend/src/i18n/LanguageContext.js` - React Context para i18n
+  - `/app/frontend/src/components/LanguageSelector.js` - Componente de selección
+
+### Dashboard de Análisis para Admin (Febrero 2026) ✅
 - **Gráfico de Pastel**: Órdenes por Estado (Pendiente, Recibido, En Proceso, Completado, Cancelado)
 - **Gráfico de Barras Horizontal**: Productos por Categoría
 - **Gráfico de Área**: Tendencia Mensual (Órdenes e Ingresos)
