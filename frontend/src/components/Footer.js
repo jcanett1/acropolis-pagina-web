@@ -19,7 +19,7 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-br from-[#0F172A] to-[#1E293B] text-white" data-testid="footer">
       <div className="max-w-7xl mx-auto px-5 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand Section */}
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3">
@@ -89,32 +89,80 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Services */}
-          <div className="flex flex-col gap-4">
+          {/* Services with Images */}
+          <div className="flex flex-col gap-4 lg:col-span-2">
             <h3 className="text-lg font-semibold">{t('footer.services')}</h3>
-            <nav className="flex flex-col gap-2.5">
-              <span className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300 cursor-pointer">
-                {t('footer.communication247')}
-              </span>
-              <Link to="/servicios" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
-                {t('footer.provisions')}
+            <p className="text-blue-400 text-sm font-medium mb-2">
+              {t('footer.communication247')}
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              <Link to="/servicios" className="group relative rounded-lg overflow-hidden h-20">
+                <img 
+                  src="https://images.unsplash.com/photo-1650012048722-c81295ccbe79?w=200&h=150&fit=crop" 
+                  alt="Provisions"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <span className="absolute bottom-2 left-2 text-white text-xs font-medium">
+                  {t('footer.provisions')}
+                </span>
               </Link>
-              <Link to="/servicios" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
-                {t('footer.personalArticles')}
+              <Link to="/servicios" className="group relative rounded-lg overflow-hidden h-20">
+                <img 
+                  src="https://images.unsplash.com/photo-1536118253180-b885be68d20b?w=200&h=150&fit=crop" 
+                  alt="Personal Articles"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <span className="absolute bottom-2 left-2 text-white text-xs font-medium">
+                  {t('footer.personalArticles')}
+                </span>
               </Link>
-              <Link to="/servicios" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
-                {t('footer.navigationEquipment')}
+              <Link to="/servicios" className="group relative rounded-lg overflow-hidden h-20">
+                <img 
+                  src="https://images.unsplash.com/photo-1568615354554-8328579fe87e?w=200&h=150&fit=crop" 
+                  alt="Navigation Equipment"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <span className="absolute bottom-2 left-2 text-white text-xs font-medium">
+                  {t('footer.navigationEquipment')}
+                </span>
               </Link>
-              <Link to="/servicios" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
-                {t('footer.consumables')}
+              <Link to="/servicios" className="group relative rounded-lg overflow-hidden h-20">
+                <img 
+                  src="https://images.unsplash.com/photo-1764114441097-6a475eca993d?w=200&h=150&fit=crop" 
+                  alt="Consumables"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <span className="absolute bottom-2 left-2 text-white text-xs font-medium">
+                  {t('footer.consumables')}
+                </span>
               </Link>
-              <Link to="/servicios" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
-                {t('footer.cabin')}
+              <Link to="/servicios" className="group relative rounded-lg overflow-hidden h-20">
+                <img 
+                  src="https://images.unsplash.com/photo-1651902387099-787f4a62a3e3?w=200&h=150&fit=crop" 
+                  alt="Cabin"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <span className="absolute bottom-2 left-2 text-white text-xs font-medium">
+                  {t('footer.cabin')}
+                </span>
               </Link>
-              <Link to="/servicios" className="text-white/70 text-sm hover:text-white hover:translate-x-1 transition-all duration-300">
-                {t('footer.rescueEquipment')}
+              <Link to="/servicios" className="group relative rounded-lg overflow-hidden h-20">
+                <img 
+                  src="https://images.unsplash.com/photo-1758716147082-c2d332b1aed9?w=200&h=150&fit=crop" 
+                  alt="Rescue Equipment"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <span className="absolute bottom-2 left-2 text-white text-xs font-medium">
+                  {t('footer.rescueEquipment')}
+                </span>
               </Link>
-            </nav>
+            </div>
           </div>
 
           {/* Contact Info */}
