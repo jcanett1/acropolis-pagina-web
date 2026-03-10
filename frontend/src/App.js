@@ -12,16 +12,24 @@ import ProveedorDashboard from '@/pages/ProveedorDashboard';
 import AdminDashboard from '@/pages/AdminDashboard';
 import '@/App.css';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-export const API = `${BACKEND_URL}/api`;
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || '';
+export const API = BACKEND_URL ? `${BACKEND_URL}/api` : null;
 
 export const AuthContext = createContext();
+
+// Determinar el basename para GitHub Pages
+const basename = process.env.PUBLIC_URL || '';
 
 function App() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (!API) {
+      // Sin backend configurado, no intentar autenticación
+      setLoading(false);
+      return;
+    }
     const token = localStorage.getItem('token');
     if (token) {
       fetch(`${API}/auth/me`, {
@@ -55,7 +63,7 @@ function App() {
   return (
     <LanguageProvider>
       <AuthContext.Provider value={{ user, setUser, logout }}>
-        <BrowserRouter>
+        <BrowserRouter basename={basename}>
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/quienes-somos" element={<QuienesSomos />} />
