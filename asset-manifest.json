@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/acropolis-pagina-web/static/css/main.40d88505.css",
+    "main.js": "/acropolis-pagina-web/static/js/main.5cf0d4ab.js",
+    "index.html": "/acropolis-pagina-web/index.html",
+    "main.40d88505.css.map": "/acropolis-pagina-web/static/css/main.40d88505.css.map",
+    "main.5cf0d4ab.js.map": "/acropolis-pagina-web/static/js/main.5cf0d4ab.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.40d88505.css",
+    "static/js/main.5cf0d4ab.js"
+  ]
+}
